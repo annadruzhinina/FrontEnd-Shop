@@ -5,7 +5,7 @@ let apiUrl;
 const apiUrls = {
   // Need to change later on real link
   production: "https://shop-production.up.railway.app",
-  development: "http://localhost:4000/api",
+  development: "http://localhost:4000/",
 };
 
 if (window.location.hostname === "localhost") {

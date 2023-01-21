@@ -7,15 +7,11 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Navbar>
-          <Routes>
-            <Route>
-              <Route path="/home">element={<Home />}</Route>
-            </Route>
-          </Routes>
-        </Navbar>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </Router>
-      <h1>Hello team! Here is will be our UI 😛</h1>
     </div>
   );
 }

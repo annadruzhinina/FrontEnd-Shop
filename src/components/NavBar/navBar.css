@@ -1,5 +1,11 @@
-.navbar {
-  height: 80px;
+.nav-container {
   width: 100wh;
-  background-color: beige;
+  background-color: rgb(6, 6, 5);
+}
+
+.nav-logo {
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
