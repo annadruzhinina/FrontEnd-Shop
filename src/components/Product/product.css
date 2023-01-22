@@ -18,6 +18,7 @@
 }
 
 .product-title {
+  padding-top: 15px;
   font-weight: bold;
   font-size: 18px;
 }
@@ -38,6 +39,14 @@
 }
 
 .product > button {
-  background-color: aqua;
-  border: 1px solid;
+  background-color: rgb(102, 207, 207);
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: 0.3s all ease;
 }
