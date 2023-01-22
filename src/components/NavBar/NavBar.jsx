@@ -2,6 +2,7 @@ import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
+import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 
 function Navbar() {
   return (
@@ -13,9 +14,29 @@ function Navbar() {
         <input type="text" className="nav-searchInput" />
         <SearchIcon className="nav-searchIcon" />
       </div>
-
-      {/* 3 links */}
-      {/* Baslet icon with number */}
+      <div className="nav-links">
+        {/* link 1 */}
+        <Link to="/sign-in" className="right-link">
+          <div className="link-option">
+            <span className="link-option-one">Hello, sign in</span>
+            <span className="link-option-two">Account&Lists</span>
+          </div>
+        </Link>
+        {/* link 2 */}
+        <Link to="/order" className="right-link">
+          <div className="link-option">
+            <span className="link-option-one">Returns</span>
+            <span className="link-option-two">&Orders</span>
+          </div>
+        </Link>
+        {/* link 3 */}
+        <Link to="/checkout" className="right-link">
+          <div className="link-option-cart">
+            <LocalGroceryStoreIcon />
+            <span>0</span>
+          </div>
+        </Link>
+      </div>
     </nav>
   );
 }

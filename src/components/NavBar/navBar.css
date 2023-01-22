@@ -4,9 +4,33 @@
   display: flex;
   align-items: center;
 }
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+.right-link {
+  color: white;
+  text-decoration: none;
+}
+.link-option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.link-option-one {
+  font-size: 10px;
+}
+
+.link-option-two {
+  font-size: 13px;
+  font-weight: 800;
+}
 
 .nav-logo {
-  width: 100px;
+  width: 110px;
+  object-fit: contain;
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -14,6 +38,7 @@
 .search {
   display: flex;
   flex: 1;
+  border: none;
 }
 .nav-searchInput {
   width: 100%;
@@ -22,5 +47,6 @@
 }
 .nav-searchIcon {
   background-color: rgb(216, 146, 14);
-  height: 24px !important;
+  border: none;
+  height: 25px !important;
 }
