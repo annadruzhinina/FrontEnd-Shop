@@ -15,25 +15,24 @@ function Navbar() {
         <SearchIcon className="nav-searchIcon" />
       </div>
       <div className="nav-links">
-        {/* link 1 */}
         <Link to="/sign-in" className="right-link">
           <div className="link-option">
             <span className="link-option-one">Hello, sign in</span>
             <span className="link-option-two">Account&Lists</span>
           </div>
         </Link>
-        {/* link 2 */}
+
         <Link to="/order" className="right-link">
           <div className="link-option">
             <span className="link-option-one">Returns</span>
             <span className="link-option-two">&Orders</span>
           </div>
         </Link>
-        {/* link 3 */}
+
         <Link to="/checkout" className="right-link">
           <div className="link-option-cart">
             <LocalGroceryStoreIcon />
-            <span>0</span>
+            <span className="link-option-two cart-count">0</span>
           </div>
         </Link>
       </div>

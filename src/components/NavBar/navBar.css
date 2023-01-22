@@ -3,6 +3,9 @@
   background-color: rgb(6, 6, 5);
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .nav-links {
   display: flex;
@@ -26,6 +29,16 @@
 .link-option-two {
   font-size: 13px;
   font-weight: 800;
+}
+
+.link-option-cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .nav-logo {

@@ -3,8 +3,8 @@ import "./home.css";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello team! Here is will be our UI 😛</h1>
+    <div className="home-container">
+      <h1 className="home-text">Hello team! Here is will be our UI 😛</h1>
     </div>
   );
 }
