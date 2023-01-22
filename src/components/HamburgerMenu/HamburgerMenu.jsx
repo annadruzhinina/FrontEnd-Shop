@@ -12,15 +12,15 @@ function HamburgerMenu() {
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <div className="humburger">
-          <Link to="#" className="humburger-menu">
+        <div className="hamburger">
+          <Link to="#" className="hamburger-menu">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
-            <li className="humburger-toggle">
-              <Link to="#" className="humburger-menu">
+            <li className="hamburger-toggle">
+              <Link to="#" className="hamburger-menu">
                 <AiIcons.AiOutlineClose />
               </Link>
             </li>
