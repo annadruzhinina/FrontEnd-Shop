@@ -3,10 +3,13 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.jsx";
 
 function Navbar() {
   return (
     <nav className="nav-container">
+      <HamburgerMenu />
+
       <Link to="/" className="nav-link">
         <img src="./image/amazon.png" className="nav-logo" alt="" />
       </Link>
