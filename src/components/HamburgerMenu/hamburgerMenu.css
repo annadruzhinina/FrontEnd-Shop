@@ -14,8 +14,13 @@
 }
 
 .nav-menu {
-  background-color: rgba(24, 25, 25, 0.95);
-  /* background-color: rgba(155, 199, 219, 0.95); */
+
+  background: linear-gradient(
+    rgb(6, 6, 6),
+    rgba(147, 194, 220),
+    rgba(255, 228, 196, 0.8)
+  );
+
   width: 250px;
   height: 100vh;
   display: flex;
@@ -55,6 +60,9 @@
   padding: 0 16px;
   border-radius: 4px;
   color: white;
+
+  font-weight: bold;
+
 }
 
 .nav-text a:hover {
