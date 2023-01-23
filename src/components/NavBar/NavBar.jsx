@@ -1,5 +1,5 @@
 import React from "react";
-import "./navbar.css";
+import "./navBar.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
