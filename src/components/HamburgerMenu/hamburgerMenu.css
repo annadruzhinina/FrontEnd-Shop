@@ -8,7 +8,8 @@
 
 .hamburger-menu {
   margin-left: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   background: none;
 }
 
@@ -22,6 +23,7 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  background: linear-gradient(rgba(155, 199, 219), rgba(255, 228, 196, 0.8));
 }
 
 .nav-menu.active {
