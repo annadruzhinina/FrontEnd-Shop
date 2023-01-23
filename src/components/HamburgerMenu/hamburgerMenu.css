@@ -26,8 +26,8 @@
   transition: 850ms;
   background: linear-gradient(
     rgb(6, 6, 6),
-    rgba(147, 194, 220),
-    rgba(255, 228, 196, 0.8)
+    rgb(124, 193, 188),
+    rgba(255, 228, 196, 0.6)
   );
 }
 
@@ -47,7 +47,6 @@
 
 .nav-text a {
   text-decoration: none;
-  color: black;
   font-size: 18px;
   width: 95%;
   height: 100%;
@@ -60,6 +59,8 @@
 
 .nav-text a:hover {
   background-color: rgba(255, 228, 196, 0.758);
+  color: black;
+  font-weight: bold;
   transform: scale(0.9);
   transition: 0.3s all ease;
 }
