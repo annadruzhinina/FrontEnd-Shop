@@ -44,7 +44,6 @@
 
 .nav-text a {
   text-decoration: none;
-  color: black;
   font-size: 18px;
   width: 95%;
   height: 100%;
@@ -52,6 +51,8 @@
   align-items: center;
   padding: 0 16px;
   border-radius: 4px;
+  color: white;
+  font-weight: bold;
 }
 
 .nav-text a:hover {
