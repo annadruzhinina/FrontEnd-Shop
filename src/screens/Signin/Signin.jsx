@@ -5,6 +5,7 @@ export default function Signin() {
   const [user, setUser] = useState ({
     username: "",
     password: "",
+    valid: true,
     message: ""
   });
   const handleSubmit = (e) => {
@@ -24,12 +25,21 @@ export default function Signin() {
     if (e.target.id === "username") {
       setUser ({
         username: e.target.value,
-      
-      })
+      });
+    } else if (e.target.id === "password") {
+        setUser ({
+          password: e.target.value,
+        });
+      } else if (e.target.id === "Confirm") {
+        setUser({
+          passwordConfirm: e.target.value,
+        });
+      }
+      }
     }
-  }
+  
 
 
 
   return <div>Sign In</div>;
-}
+
