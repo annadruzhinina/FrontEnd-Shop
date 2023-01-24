@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-// import productsData from "../../products.json";
 import { productDataContext } from "../../App.js";
 import "../HamburgerMenu/hamburgerMenu.css";
 import { Link } from "react-router-dom";
@@ -8,12 +7,14 @@ import Product from "../Product/Product.jsx";
 
 const Category = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [filteredProducts, setFilteredProducts] = useState(productsData);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   const data = useContext(productDataContext);
+  // if (data.length === 0) return <h1>Loading ... </h1>
+  console.log(data);
 
   const uniqueCategories = [
-    ...new Set(data.map((product) => product.category)),
+    ...new Set(data.map((product) => product.category))
   ];
 
   const handleCategoryClick = (category) => {
@@ -22,16 +23,15 @@ const Category = () => {
       data.filter((product) => product.category === category)
     );
   };
-
-  if (data.length === 0) return <h1>Loading ... </h1>
+  // if (filteredProducts.length === 0) return <h1>Loading 2 ... </h1>
   return (
     <>
       <div className="category-container">
         <div className="category-nav ">
           <div className="container">
             <div className="category-nav-menu">
-              {uniqueCategories.map((category) => (
-                <button
+              {uniqueCategories.map((category, index) => (
+                <button key={index}
                   className="category-link"
                   onClick={() => handleCategoryClick(category)}
                 >
@@ -44,7 +44,7 @@ const Category = () => {
         <Product products={filteredProducts} />
       </div>
     </>
-  );
+  );          
 };
 
 export default Category;
