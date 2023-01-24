@@ -8,7 +8,7 @@ import Signin from "./screens/Signin/Signin.jsx";
 import Order from "./screens/Order/Order.jsx";
 import Cart from "./screens/Cart/Cart.jsx";
 import Category from "./components/Category/Categories.jsx";
-
+// Create and Export Product Data Context
 export const productDataContext = React.createContext();
 
 function App() {
