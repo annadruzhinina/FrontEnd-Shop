@@ -2,9 +2,10 @@ import React from "react";
 import "./product.css";
 
 function Product(props) {
-  const products = props.products?.map((product) => {
+  const products = props.products?.map((product, index) => {
     return (
-      <div className="product" key={product._id}>
+      
+      <div className="product" key={index}>
         <div className="product-description">
           <p className="product-title">{product.title}</p>
           <p>{product.description}</p>
