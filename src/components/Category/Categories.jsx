@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import productsData from "../../products.json";
 import "../HamburgerMenu/hamburgerMenu.css";
-import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
 import "./categories.css";
 
@@ -22,39 +21,67 @@ const Category = () => {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <div className="category-container">
-          <div className="category-link">
-            <Link to="/categories">
+      <div className="category-container">
+        <div className="category-nav ">
+          <div className="container">
+            <div className="category-nav-menu">
               {uniqueCategories.map((category) => (
-                <li
-                  className="hamburger-toggle"
+                <button
+                  className="category-link"
                   onClick={() => handleCategoryClick(category)}
                 >
                   {category}
-                </li>
+                </button>
               ))}
-            </Link>
+            </div>
           </div>
-          {selectedCategory && <ProductList products={filteredProducts} />}
         </div>
-      </IconContext.Provider>
+        {selectedCategory && <ProductList products={filteredProducts} />}
+      </div>
     </>
   );
 };
 
 const ProductList = ({ products }) => {
   return (
-    <div>
-      {products.map((product) => (
-        <div>
-          <h3>{product.title}</h3>
-          <p>{product.description}</p>
-          <img src={product.images} alt={product.title} />
+    <div className="category-img-container">
+      <div className="container">
+        <div className="product-list">
+          {products.map((product) => (
+            <div className="product-description-category">
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+              <img
+                className="product-img"
+                src={product.images}
+                alt={product.title}
+              />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
 
 export default Category;
+
+// return (
+//   <div className="category-img-container">
+//     <div className="container">
+//       <div className="product-list">
+//         {products.map((product) => (
+//           <div className="product-description-category">
+//             <h3>{product.title}</h3>
+//             <p>{product.description}</p>
+//             <img
+//               className="product-img"
+//               src={product.images}
+//               alt={product.title}
+//             />
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   </div>
+// );
