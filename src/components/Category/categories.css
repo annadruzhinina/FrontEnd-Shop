@@ -50,12 +50,12 @@
   width: 100%;
   padding-top: 60px;
 }
-.product-description {
+/* .product-description-category {
   height: 100px;
   margin-bottom: 15px;
   text-align: justify;
-  min-height: 300px;
-}
+  /* min-height: 300px; 
+} */
 
 .product-list {
   padding: 30px;
