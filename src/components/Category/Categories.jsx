@@ -4,10 +4,11 @@ import { productDataContext } from "../../App.js";
 import "../HamburgerMenu/hamburgerMenu.css";
 import { Link } from "react-router-dom";
 import "./categories.css";
+import Product from "../Product/Product.jsx";
 
 const Category = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState(productsData);
 
   const data = useContext(productDataContext);
 
@@ -16,7 +17,7 @@ const Category = () => {
   ];
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
+    setSelectedCategory(category)
     setFilteredProducts(
       data.filter((product) => product.category === category)
     );
@@ -40,31 +41,9 @@ const Category = () => {
             </div>
           </div>
         </div>
-        {selectedCategory && <ProductList products={filteredProducts} />}
+        <Product products={filteredProducts} />
       </div>
     </>
-  );
-};
-
-const ProductList = ({ products }) => {
-  return (
-    <div className="category-img-container">
-      <div className="container">
-        <div className="product-list">
-          {products.map((product) => (
-            <div className="product-description-category">
-              <h3>{product.title}</h3>
-              <p>{product.description}</p>
-              <img
-                className="product-img"
-                src={product.images}
-                alt={product.title}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
   );
 };
 
