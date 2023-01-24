@@ -65,23 +65,3 @@ const ProductList = ({ products }) => {
 };
 
 export default Category;
-
-// return (
-//   <div className="category-img-container">
-//     <div className="container">
-//       <div className="product-list">
-//         {products.map((product) => (
-//           <div className="product-description-category">
-//             <h3>{product.title}</h3>
-//             <p>{product.description}</p>
-//             <img
-//               className="product-img"
-//               src={product.images}
-//               alt={product.title}
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   </div>
-// );
