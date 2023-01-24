@@ -1,3 +1,4 @@
+// Imports
 import React, { useState } from "react";
 import productsData from "../../products.json";
 import "../HamburgerMenu/hamburgerMenu.css";

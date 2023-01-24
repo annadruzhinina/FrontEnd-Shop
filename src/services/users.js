@@ -1,3 +1,4 @@
+// Imports
 import api from "./apiConfig.js";
 
 export const getUsers = async () => {
