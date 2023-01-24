@@ -36,6 +36,7 @@ function App() {
 
   return (
     <div className="app">
+      <productDataContext.Provider value={productData}>
       <Router>
         <Navbar />
         <Routes>
@@ -47,6 +48,7 @@ function App() {
           <Route path="/categories/technology/:id" element={<Category />} />
         </Routes>
       </Router>
+      </productDataContext.Provider>
     </div>
   );
 }
