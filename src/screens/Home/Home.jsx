@@ -1,7 +1,5 @@
 import React from "react";
 import "./home.css";
-import Product from "../../components/Product/Product.jsx";
-import productsData from "../../products.json";
 
 export default function Home() {
   return (
