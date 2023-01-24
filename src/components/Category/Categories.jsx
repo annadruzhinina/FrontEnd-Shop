@@ -23,7 +23,6 @@ const Category = () => {
   };
 
   if (data.length === 0) return <h1>Loading ... </h1>
-
   return (
     <>
       <div className="category-container">

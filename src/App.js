@@ -1,7 +1,7 @@
 // Imports
 import "./App.css";
 import React, { useState, useEffect, createContext, useContext } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./screens/Home/Home.jsx";
 import Navbar from "./components/NavBar/NavBar.jsx";
 import Signin from "./screens/Signin/Signin.jsx";
@@ -18,7 +18,7 @@ function App() {
     fetch("http://localhost:4000/products")
     .then(res => res.json())
     .then(data => {
-      let prodData = data.map((product) => {
+      let prodData = data.map((product, index) => {
         return {
           "title": product.title,
           "description": product.description,
@@ -37,17 +37,15 @@ function App() {
   return (
     <div className="app">
       <productDataContext.Provider value={productData}>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sign-in" element={<Signin />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/checkout" element={<Cart />} />
-          <Route path="/categories" element={<Category />} />
-          <Route path="/categories/technology/:id" element={<Category />} />
-        </Routes>
-      </Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sign-in" element={<Signin />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/checkout" element={<Cart />} />
+        <Route path="/categories" element={<Category />} />
+        <Route path="/categories/technology/:id" element={<Category />} />
+      </Routes>
       </productDataContext.Provider>
     </div>
   );
