@@ -11,16 +11,14 @@ import Category from "./components/Category/Categories.jsx";
 
 export const productDataContext = React.createContext();
 
-
-
 function App() {
-  const [productData, setProductData] = useState([]);
+  const [productData, setProductData] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:4000/")
+    fetch("http://localhost:4000/products")
     .then(res => res.json())
     .then(data => {
-      let prodData = data.mao((product) => {
+      let prodData = data.map((product) => {
         return {
           "title": product.title,
           "description": product.description,
@@ -33,6 +31,8 @@ function App() {
       setProductData(prodData);
     })
   }, [])
+
+  console.log(productData);
 
   return (
     <div className="app">
