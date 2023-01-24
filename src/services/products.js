@@ -1,6 +1,7 @@
 // Imports
 import api from "./apiConfig.js";
 
+// Exports all products
 export const getProducts = async () => {
   try {
     const response = await api.get("/products");
@@ -10,6 +11,7 @@ export const getProducts = async () => {
   }
 };
 
+// Exports certain product
 export const getProduct = async (id) => {
   try {
     const response = await api.get(`/products/${id}`);
@@ -19,6 +21,7 @@ export const getProduct = async (id) => {
   }
 };
 
+// Creates product
 export const createProduct = async (ProductData) => {
   try {
     const response = await api.post("/products", ProductData);
@@ -28,6 +31,7 @@ export const createProduct = async (ProductData) => {
   }
 };
 
+// Updates product
 export const updateProduct = async (id, ProductData) => {
   try {
     const response = await api.put(`/products/${id}`, ProductData);
@@ -37,6 +41,7 @@ export const updateProduct = async (id, ProductData) => {
   }
 };
 
+// Deletes product
 export const deleteProduct = async (id) => {
   try {
     const response = await api.delete(`/products/${id}`);

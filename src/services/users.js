@@ -1,6 +1,7 @@
 // Imports
 import api from "./apiConfig.js";
 
+// Exports all users
 export const getUsers = async () => {
   try {
     const response = await api.get("/Users");
@@ -10,6 +11,7 @@ export const getUsers = async () => {
   }
 };
 
+// Export certain user
 export const getUser = async (id) => {
   try {
     const response = await api.get(`/Users/${id}`);
@@ -19,6 +21,7 @@ export const getUser = async (id) => {
   }
 };
 
+// Creates user
 export const createUser = async (UserData) => {
   try {
     const response = await api.post("/Users", UserData);
@@ -28,6 +31,7 @@ export const createUser = async (UserData) => {
   }
 };
 
+// Updates user
 export const updateUser = async (id, UserData) => {
   try {
     const response = await api.put(`/Users/${id}`, UserData);
@@ -37,6 +41,7 @@ export const updateUser = async (id, UserData) => {
   }
 };
 
+// Deletes user
 export const deleteUser = async (id) => {
   try {
     const response = await api.delete(`/Users/${id}`);
