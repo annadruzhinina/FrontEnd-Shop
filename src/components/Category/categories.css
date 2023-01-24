@@ -49,6 +49,11 @@
 .category-img-container {
   width: 100%;
   padding-top: 60px;
+  padding: 30px;
+  background-color: white;
+  /* aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn; */
 }
 /* .product-description-category {
   height: 100px;
