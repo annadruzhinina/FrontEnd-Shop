@@ -26,15 +26,7 @@
     "category": "Technology",
     "images": "https://www.cnet.com/a/img/resize/fade8ea5bd72e22f7b3180d4790b51b3e2c7ddcd/hub/2022/01/27/284845e1-56eb-45e6-a766-c4fb06055a2c/huawei-p50-pro-review-cnet-hoyle.jpg?auto=webp&fit=crop&height=1200&width=1200"
   },
-  {
-    "productId": 4,
-    "title": "Nokia 2760",
-    "description": "The OG",
-    "price": 20,
-    "brand": "HMD",
-    "category": "Technology",
-    "images": "https://m.media-amazon.com/images/I/615vgooiuhL.jpg"
-  },
+
   {
     "productId": 5,
     "title": "pixel 6 pro",

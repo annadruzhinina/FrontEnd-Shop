@@ -55,11 +55,13 @@
 }
 .nav-searchInput {
   width: 100%;
-  border: none;
+  border: none !important;
   height: 25px;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
 }
 .nav-searchIcon {
   background-color: rgb(216, 146, 14);
-  border: none;
+  border: none !important;
   height: 25px !important;
 }
