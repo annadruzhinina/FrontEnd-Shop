@@ -1,8 +1,8 @@
 import React from "react";
 import "./product.css";
 
+
 function Product({
-  productId,
   title,
   description,
   price,

@@ -1,9 +1,77 @@
 .category-container {
+  display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
-.category-link a {
+.category-nav {
+  position: sticky;
+  background-color: rgba(0, 0, 0, 0.795);
+  width: 100%;
+}
+
+.category-nav-menu {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  padding: 8px 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.category-link:hover {
+  background-color: rgba(255, 228, 196, 0.758);
+  color: black;
+  transform: scale(0.9);
+  transition: 0.3s all ease;
+}
+
+.category-card {
+  width: 30%;
+  margin: 10px;
+}
+
+.product-img {
+  width: 250px;
+  height: 250px;
+}
+
+.category-img-container {
+  width: 100%;
+  padding-top: 60px;
+  padding: 30px;
+  background-color: white;
+  /* aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn; */
+}
+/* .product-description-category {
+  height: 100px;
+  margin-bottom: 15px;
+  text-align: justify;
+  /* min-height: 300px; 
+} */
+
+.product-list {
+  padding: 30px;
+  --n: 3; /* number of rows*/
+  --m: 3; /* number of columns */
+  --g: 20px; /* control the gap */
+  --f: 1.5; /* control the scale factor */
+
+  display: grid;
+  gap: var(--g);
+  width: calc(var(--m) * var(--s) + (var(--m) - 1) * var(--g));
+  height: calc(var(--n) * var(--s) + (var(--n) - 1) * var(--g));
+  grid-template-columns: repeat(var(--m), auto);
 }

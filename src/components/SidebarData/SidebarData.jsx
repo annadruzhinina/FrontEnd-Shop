@@ -22,10 +22,4 @@ export const SidebarData = [
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
-  {
-    title: "Sign In",
-    path: "/sign-in",
-    icon: <IoIcons.IoIosPerson />,
-    cName: "nav-text",
-  },
 ];
