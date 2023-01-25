@@ -15,7 +15,7 @@ function Signin() {
     passwordConfirm: "",
     valid: ""
   });
-  
+
   //Deconstruct useState
   const [username, setUserName] = useState("")
   const [email, setEmail] = useState("")
@@ -79,11 +79,6 @@ function Signin() {
       return "Password incorrect please try again."
     }
   }
-
-  // function pwValidation (password, passwordConfirm) {
-  //   if ()
-
-  // } 
 
   //Return component HTML
   return (

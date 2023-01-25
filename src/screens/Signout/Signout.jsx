@@ -6,7 +6,7 @@ import { useAuthContext } from "../../Hooks/useLoginContext.js";
 function SignOut() {
   //Deconstruct useAuthContext to pull dispatch
   const { dispatch } = useAuthContext()
-  
+  const { user } = useAuthContext()
   //Deconstruct useState
   const [username, setUserName] = useState("")
   //Handle Submit
@@ -22,8 +22,8 @@ function SignOut() {
   return (
     <div className="logoutContainer">
       <div className="logOutForm" onSubmit={handleSubmit}>
-        <h1 className="SignOut">Sign Out</h1>
-        <button id="logOut" value="">Log Out</button>
+        <h1 className="SignOut">`Would you like to sign out, ${user}`</h1>
+        <button id="logOut" value="">Sign Out</button>
       </div>
     </div>
   )
