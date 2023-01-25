@@ -1,7 +1,7 @@
-import { React, useEffect, useState} from "react";
+//Import CSS
 import "./products.css";
-import Product from "../../components/Product/Product.jsx"
 
+//Export Products Function
 export default function Products() {
   return <div>Products</div>;
 }

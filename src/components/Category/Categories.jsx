@@ -1,15 +1,14 @@
 import React, { useState, useContext } from "react";
 import { productDataContext } from "../../App.js";
 import "../HamburgerMenu/hamburgerMenu.css";
-import { Link } from "react-router-dom";
 import "./categories.css";
 import Product from "../Product/Product.jsx";
 
 const Category = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-
   const data = useContext(productDataContext);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState(data);
+
   // if (data.length === 0) return <h1>Loading ... </h1>
   console.log(data);
 

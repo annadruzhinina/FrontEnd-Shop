@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.jsx";
-import Category from "../Category/Categories.jsx";
 
 function Navbar() {
   return (
