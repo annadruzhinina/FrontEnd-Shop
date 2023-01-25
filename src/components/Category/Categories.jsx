@@ -6,10 +6,10 @@ import "./categories.css";
 import Product from "../Product/Product.jsx";
 
 const Category = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-
   const data = useContext(productDataContext);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState(data);
+
   // if (data.length === 0) return <h1>Loading ... </h1>
   console.log(data);
 
@@ -30,8 +30,8 @@ const Category = () => {
         <div className="category-nav ">
           <div className="container">
             <div className="category-nav-menu">
-              {uniqueCategories.map((category, index) => (
-                <button key={index}
+              {uniqueCategories.map((category) => (
+                <button
                   className="category-link"
                   onClick={() => handleCategoryClick(category)}
                 >
