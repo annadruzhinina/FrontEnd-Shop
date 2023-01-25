@@ -6,10 +6,11 @@
   max-height: 400px;
   min-width: 220px;
   padding: 15px;
-  width: 100%;
+  width: 300px;
   background-color: white;
   z-index: 1;
   border-radius: 20px 20px 20px 20px;
+  margin-bottom: 30px;
 }
 
 .product-description {
@@ -17,6 +18,7 @@
   margin-bottom: 15px;
   text-align: justify;
   margin-bottom: 20px;
+  float: left !important;
 }
 .product-category-text {
   margin-bottom: 10px;
@@ -65,14 +67,8 @@ button:hover {
 
 .products-list-main {
   padding: 30px;
-  --n: 3; /* number of rows*/
-  --m: 3; /* number of columns */
-  --g: 20px; /* control the gap */
-  --f: 1.5; /* control the scale factor */
-
-  display: grid;
-  gap: var(--g);
-  width: calc(var(--m) * var(--s) + (var(--m) - 1) * var(--g));
-  height: calc(var(--n) * var(--s) + (var(--n) - 1) * var(--g));
-  grid-template-columns: repeat(var(--m), auto);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
 }

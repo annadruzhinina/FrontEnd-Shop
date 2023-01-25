@@ -10,7 +10,7 @@ function Product(props) {
           <p className="product-title">{product.title}</p>
           <p className="product-description-text">{product.description}</p>
           <p>{product.brand}</p>
-          <p className="product-category-text">{product.category}</p>
+          {/* <p className="product-category-text">{product.category}</p> */}
           <p className="product-price">
             <small>$</small>
             <strong>{product.price}</strong>

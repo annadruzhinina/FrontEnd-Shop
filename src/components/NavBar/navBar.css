@@ -5,7 +5,7 @@
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 .nav-links {
   display: flex;
@@ -61,7 +61,7 @@
   margin-bottom: 0 !important;
 }
 .nav-searchIcon {
-  background-color: rgb(216, 146, 14);
+  background-color: rgb(91 220 212);
   border: none !important;
   height: 25px !important;
 }
