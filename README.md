@@ -11,7 +11,8 @@ Description - This is the Comfy Coders FrontEnd React Repository.
 
 # WireFrame 
 
-![alt text](https://ga-students.slack.com/files/U049PPTK1JA/F04L3TYLXK9/screenshot_2023-01-25_at_1.27.18_pm.png)
+![alt text](<img width="146" alt="Screenshot 2023-01-25 at 1 27 18 PM (1)" src="https://user-images.githubusercontent.com/117683775/214701917-e1a1009e-85f2-4da6-bec2-2f41d4269f58.png">
+)
 
 
 
