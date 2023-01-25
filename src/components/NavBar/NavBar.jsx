@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.jsx";
-import Category from "../Category/Categories.jsx";
+import { useStateValue } from "../StateProvider/StateProvider.js";
 
 function Navbar() {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <nav className="nav-container">
       <HamburgerMenu />
@@ -36,7 +38,7 @@ function Navbar() {
         <Link to="/checkout" className="right-link">
           <div className="link-option-cart">
             <LocalGroceryStoreIcon />
-            <span className="link-option-two cart-count">0</span>
+            <span className="link-option-two cart-count">{basket.length}</span>
           </div>
         </Link>
       </div>

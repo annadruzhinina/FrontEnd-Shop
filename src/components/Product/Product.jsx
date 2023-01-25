@@ -1,8 +1,17 @@
 import React from "react";
 import "./product.css";
-import productsData from "../../products.json";
+import { useStateValue } from "../StateProvider/StateProvider.js";
 
 function Product(props) {
+  const [{ basket }, dispatch] = useStateValue();
+  const addToBasket = (productItem) => {
+    console.log("addToBasket", productItem);
+    // Add item to the basket
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: productItem,
+    });
+  };
   const products = props.products?.map((product) => {
     return (
       <div className="product" key={product._id}>
@@ -17,7 +26,9 @@ function Product(props) {
           </p>
         </div>
         <img src={product.images} alt="" />
-        <button className="btn-add">Add to basket</button>
+        <button onClick={(e) => addToBasket(product)} className="btn-add">
+          Add to basket
+        </button>
       </div>
     );
   });
