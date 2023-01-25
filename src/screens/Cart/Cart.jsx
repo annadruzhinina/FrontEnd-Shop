@@ -33,7 +33,7 @@ export default function Cart() {
         src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8b77bd111102863.5ffc0a48e1780.jpg"
         alt=""
       />
-      {/* {basket?.length === 0 ? (
+      {basket?.length === 0 ? (
         <div>
           <h2>Your Shopping Cart is empty</h2>
         </div>
@@ -41,7 +41,7 @@ export default function Cart() {
         <div>
           <h2>Your Shopping Cart</h2>
         </div>
-      )} */}
+      )}
 
       <div>{products}</div>
     </div>
