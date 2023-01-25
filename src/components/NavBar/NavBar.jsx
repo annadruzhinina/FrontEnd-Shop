@@ -6,10 +6,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.jsx";
 import { useStateValue } from "../StateProvider/StateProvider.js";
+import { useAuthContext } from "../../Hooks/useLoginContext.js";
 
 function Navbar() {
   const [{ basket }, dispatch] = useStateValue();
-
+  const { user } = useAuthContext()
   return (
     <nav className="nav-container">
       <HamburgerMenu />
@@ -24,7 +25,7 @@ function Navbar() {
       <div className="nav-links">
         <Link to="/sign-in" className="right-link">
           <div className="link-option">
-            <span className="link-option-one">Hello, sign in</span>
+            <span className="link-option-one">{user ? `Hello, ${user}` : "Login"}</span>
             <span className="link-option-two">Account&Lists</span>
           </div>
         </Link>
