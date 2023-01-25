@@ -17,7 +17,7 @@ const Category = () => {
   ];
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category)
+    setSelectedCategory(category);
     setFilteredProducts(
       data.filter((product) => product.category === category)
     );

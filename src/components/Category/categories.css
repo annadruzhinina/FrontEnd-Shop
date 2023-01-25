@@ -8,10 +8,13 @@
   position: sticky;
   background-color: rgba(0, 0, 0, 0.795);
   width: 100%;
+  top: 56px;
+  z-index: 100;
 }
 
 .category-nav-menu {
   display: flex;
+  position: sticky;
 }
 
 .category-link {

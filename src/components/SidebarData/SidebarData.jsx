@@ -24,4 +24,10 @@ export const SidebarData = [
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
+  {
+    title: "Cart",
+    path: "/checkout",
+    icon: <IoIcons.IoMdCart />,
+    cName: "nav-text",
+  },
 ];
