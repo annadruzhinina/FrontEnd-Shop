@@ -1,5 +1,7 @@
 //Import Modules
 import React, { useContext } from "react";
+//Import Components
+import Product from "../../components/Product/Product.jsx";
 //Import Context
 import { productDataContext } from "../../App.js";
 //Import CSS
@@ -13,7 +15,8 @@ export default function Home() {
   return (
     <div className="home-container">
       <img src="/image/bg-home_4.png" className="home-banner-img" alt="" />
-      <div className="product-row">
+      <div>
+        <Product products={productData} />
       </div>
     </div>
   );
