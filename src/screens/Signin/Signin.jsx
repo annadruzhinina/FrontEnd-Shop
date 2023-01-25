@@ -74,6 +74,11 @@ function Signin() {
     }
   }
 
+  // function pwValidation (password, passwordConfirm) {
+  //   if ()
+
+  // } 
+
   //Return component HTML
   return (
     <>
@@ -98,6 +103,8 @@ function Signin() {
           type="password" 
           placeholder="password"
           value={password} 
+          minLength="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}"
           onChange={(e)=> setPassword(e.target.value)}
         />
         <input 
