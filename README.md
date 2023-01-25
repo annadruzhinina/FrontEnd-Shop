@@ -6,13 +6,6 @@ Description - This is the Comfy Coders FrontEnd React Repository.
 
 ![alt]()
 
-# Endpoints
-
-* (Home Page)http://localhost:3000/ 
-* (Categories Page)http://localhost:3000/categories 
-* (Orders Page)http://localhost:3000/order
-* (SignIn Page)http://localhost:3000/sign-in
-
 # WireFrame 
 
 ![alt text]()
@@ -20,7 +13,12 @@ Description - This is the Comfy Coders FrontEnd React Repository.
 # Final Product
 ![alt text]()
 
+# Endpoints
 
+* (Home Page)http://localhost:3000/ 
+* (Categories Page)http://localhost:3000/categories 
+* (Orders Page)http://localhost:3000/order
+* (SignIn Page)http://localhost:3000/sign-in
 
 
 
