@@ -1,6 +1,6 @@
 // Imports
 import "./App.css";
-import React, { useState, useEffect, createContext, useContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./screens/Home/Home.jsx";
 import Navbar from "./components/NavBar/NavBar.jsx";
