@@ -42,6 +42,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #0a0b0a;
 }
+
 #submitCredentials {
   background-color: #fb9900;
   border-radius: 2px;
@@ -49,6 +50,7 @@ input[type="submit"]:hover {
   border-radius: 10px;
   border: none;
 }
+
 .SigninLogo {
   padding-bottom: 10px;
 }

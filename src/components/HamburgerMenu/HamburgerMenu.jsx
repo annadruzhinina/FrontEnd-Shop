@@ -1,3 +1,4 @@
+// Imports
 import React from "react";
 import "./hamburgerMenu.css";
 import { useState } from "react";
@@ -6,11 +7,9 @@ import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "../SidebarData/SidebarData.jsx";
 import { IconContext } from "react-icons";
-// import Categories from "../Category/Categories.jsx";
 
 function HamburgerMenu() {
   const [sidebar, setSidebar] = useState(false);
-  const [toggle, setToggle] = useState(false)
   const showSidebar = () => setSidebar(!sidebar);
 
   return (

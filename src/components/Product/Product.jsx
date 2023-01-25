@@ -1,7 +1,10 @@
+//Import React
 import React from "react";
+//Import CSS
 import "./product.css";
 import { useStateValue } from "../StateProvider/StateProvider.js";
 
+//Product Function
 function Product(props) {
   const [{ basket }, dispatch] = useStateValue();
   const addToBasket = (productItem) => {
@@ -12,9 +15,10 @@ function Product(props) {
       item: productItem,
     });
   };
-  const products = props.products?.map((product) => {
-    return (
-      <div className="product" key={product._id}>
+  //Map products data
+  const products = props.products?.map((product, index) => {
+    return (   
+      <div className="product" key={index}>
         <div className="product-description">
           <p className="product-title">{product.title}</p>
           <p className="product-description-text">{product.description}</p>
@@ -34,5 +38,5 @@ function Product(props) {
   });
   return <div className="products-list-main">{products}</div>;
 }
-
-export default Product;
+//Exports
+export default Product
