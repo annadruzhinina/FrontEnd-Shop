@@ -11,9 +11,8 @@
   margin-bottom: -100px;
 }
 
-.product-row {
+.product-column {
   display: flex;
+  flex-direction: column;
   z-index: 1;
-  margin-left: 5px;
-  margin-right: 5px;
 }
