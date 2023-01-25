@@ -6,8 +6,8 @@ Description - This is the Comfy Coders FrontEnd React Repository.
 
 
 
- (Home Page)http://localhost:3000/ 
- (Categories Page)http://localhost:3000/categories 
- (Orders Page)http://localhost:3000/order
- (SignIn Page)ocalhost:3000/sign-in
+* (Home Page)http://localhost:3000/ 
+* (Categories Page)http://localhost:3000/categories 
+* (Orders Page)http://localhost:3000/order
+* (SignIn Page)ocalhost:3000/sign-in
 
