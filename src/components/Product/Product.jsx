@@ -1,7 +1,10 @@
+//Import React
 import React from "react";
+//Import CSS
 import "./product.css";
-
+//Product Function
 function Product(props) {
+  //Map products data
   const products = props.products?.map((product, index) => {
     return (
       
@@ -21,7 +24,8 @@ function Product(props) {
       </div>
     );
   });
+  //Return Mapped Data
   return <div>{products}</div>;
 }
-
+//Exports
 export default Product;
