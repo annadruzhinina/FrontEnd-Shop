@@ -5,12 +5,14 @@ import { Navigate } from "react-router-dom";
 function Signin() {
   //Set useState object
   const [user, setUser] = useState({
+    username: "",
     email: "",
     password: "",
     passwordConfirm: "",
     valid: ""
   });
   //Deconstruct useState
+  const [username, setUserName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [passwordConfirm, setPasswordConfirm] = useState("")
@@ -24,6 +26,7 @@ function Signin() {
     e.preventDefault()
     //Update User with Values
     setUser({
+      username,
       email,
       password,
       passwordConfirm,
@@ -77,6 +80,13 @@ function Signin() {
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="SigninLogo">Sign In</h1>
         <input 
+          id="username"
+          type="text" 
+          placeholder="username" 
+          value={username}
+          onChange={(e)=> setUserName(e.target.value)}
+        />
+        <input 
           id="email"
           type="email" 
           placeholder="email" 
@@ -99,7 +109,6 @@ function Signin() {
             return (setPasswordConfirm(e.target.value))
           }}
         />
-      
         <button
           id="submitCredentials"
           type="submit" 
