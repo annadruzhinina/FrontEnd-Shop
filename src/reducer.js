@@ -1,4 +1,4 @@
-import { faBriefcaseClock } from "@fortawesome/free-solid-svg-icons";
+
 
 export const initialState = {
   basket: [],
