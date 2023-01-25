@@ -6,11 +6,12 @@ import "./categories.css";
 import Product from "../Product/Product.jsx";
 
 const Category = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-
-  // Applying use context to productDataContext and setting it to data
   const data = useContext(productDataContext);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState(data);
+
+  // if (data.length === 0) return <h1>Loading ... </h1>
+  console.log(data);
 
   // Mapping through each product category
   const uniqueCategories = [
@@ -19,7 +20,7 @@ const Category = () => {
 
   // Showing products from each category when clicked  
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category)
+    setSelectedCategory(category);
     setFilteredProducts(
       data.filter((product) => product.category === category)
     );

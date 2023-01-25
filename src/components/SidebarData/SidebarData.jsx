@@ -1,8 +1,10 @@
+//Import React
 import React from "react";
-import * as FaThList from "react-icons/fa";
+//Import Icons
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 
+//Define Sidebar Menu
 export const SidebarData = [
   {
     title: "Home",
@@ -20,6 +22,12 @@ export const SidebarData = [
     title: "Orders",
     path: "/order",
     icon: <IoIcons.IoIosPaper />,
+    cName: "nav-text",
+  },
+  {
+    title: "Cart",
+    path: "/checkout",
+    icon: <IoIcons.IoMdCart />,
     cName: "nav-text",
   },
 ];
