@@ -22,17 +22,16 @@ function reducer(state, action) {
       console.log("Items found", addItems, addItems.length);
 
       if (addItems.length > 0) {
-        const newItem = addItems[0];
-        newItem.quantity = newItem.quantity + 1;
-
-        const newBasket = state.basket.filter(function (item) {
-          return item.title != action.item.title;
+        const newBasket = state.basket.map(function (item) {
+          if (item.title === action.item.title) {
+            item.quantity = item.quantity + 1;
+          }
+          return item;
         });
-        newBasket.push(newItem);
 
         return {
           ...state,
-          basket: [...newBasket],
+          basket: newBasket,
         };
       } else {
         action.item.quantity = 1;
@@ -51,17 +50,16 @@ function reducer(state, action) {
       console.log("Remove Items", removeItems);
 
       if (removeItems.length > 0 && removeItems[0].quantity > 1) {
-        const newItem = removeItems[0];
-        newItem.quantity = newItem.quantity - 1;
-
-        const newBasket = state.basket.filter(function (item) {
-          return item.title != action.item.title;
+        const newBasket = state.basket.map(function (item) {
+          if (item.title === action.item.title) {
+            item.quantity = item.quantity - 1;
+          }
+          return item;
         });
-        newBasket.push(newItem);
 
         return {
           ...state,
-          basket: [...newBasket],
+          basket: newBasket,
         };
       } else {
         //Logic for removing item from basket
