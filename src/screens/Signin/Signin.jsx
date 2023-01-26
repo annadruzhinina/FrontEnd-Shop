@@ -1,16 +1,23 @@
 import "./signin.css"
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
+import { useAuthContext } from "../../Hooks/useLoginContext.js";
 
 function Signin() {
+  //Deconstruct useAuthContext to pull dispatch
+  const { dispatch } = useAuthContext()
+  
   //Set useState object
   const [user, setUser] = useState({
+    username: "",
     email: "",
     password: "",
     passwordConfirm: "",
     valid: ""
   });
+
   //Deconstruct useState
+  const [username, setUserName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [passwordConfirm, setPasswordConfirm] = useState("")
@@ -18,18 +25,20 @@ function Signin() {
   
   //Handle Submit
   const handleSubmit = (e) => {
-    //Console Log When Submitted
-    console.log("Submitted")
     //Prevent Page from Reloading
     e.preventDefault()
+    //Console Log When Submitted
+    console.log("Submitted")
     //Update User with Values
     setUser({
+      username,
       email,
       password,
       passwordConfirm,
       valid: password === passwordConfirm ? (password !== "" ? true : "") : false
-      
     })
+
+    dispatch({ type: "LOGIN", payload: username });
   
     //Reset Values to ''
     setEmail('')
@@ -43,7 +52,7 @@ function Signin() {
     const specialChar = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g
     const numChar = /\d/
     //Validate the password has the below criteria
-    if (pw.length >= 7 && specialChar.test(pw) && numChar.test(pw)) return true
+    if (pw.length >= 8 && specialChar.test(pw) && numChar.test(pw)) return true
     //If it does not, return false
     return false
   }
@@ -58,7 +67,7 @@ function Signin() {
       if (passwordValidation(user.password) === false) {  
         return (
           <>
-            <p>"Password Must Contain at least 7 letters"</p>
+            <p>"Password Must Contain at least 8 letters"</p>
             <p>"Password Must Include a Number and Special Character"</p>
           </>   
           )
@@ -73,10 +82,17 @@ function Signin() {
 
   //Return component HTML
   return (
-    <>
+    <div className="loginContainer">
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="SigninLogo">Sign In</h1>
-        <input 
+        <input className="username"
+          id="username"
+          type="text" 
+          placeholder="username" 
+          value={username}
+          onChange={(e)=> setUserName(e.target.value)}
+        />
+        <input className="email"
           id="email"
           type="email" 
           placeholder="email" 
@@ -88,6 +104,8 @@ function Signin() {
           type="password" 
           placeholder="password"
           value={password} 
+          minLength="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{8,}"
           onChange={(e)=> setPassword(e.target.value)}
         />
         <input 
@@ -99,7 +117,6 @@ function Signin() {
             return (setPasswordConfirm(e.target.value))
           }}
         />
-      
         <button
           id="submitCredentials"
           type="submit" 
@@ -108,7 +125,7 @@ function Signin() {
         {/* Return Validation Result */}
         <>{result(user.valid)}</>
       </form>
-    </>
+    </div>
   )
 }
 

@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./screens/Home/Home.jsx";
 import Navbar from "./components/NavBar/NavBar.jsx";
 import Signin from "./screens/Signin/Signin.jsx";
+import SignOut from "./screens/Signout/Signout.jsx";
 import Order from "./screens/Order/Order.jsx";
 import Cart from "./screens/Cart/Cart.jsx";
 import Category from "./components/Category/Categories.jsx";
@@ -17,7 +18,11 @@ function App() {
   const [productData, setProductData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/products")
+    fetch("http://localhost:4000/products", {
+      mode: 'cors', // no-cors, *cors, same-origin
+      headers: {
+        'Content-Type': 'application/json'
+      }})
       .then((res) => res.json())
       .then((data) => {
         let prodData = data.map((product, index) => {
@@ -41,6 +46,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sign-in" element={<Signin />} />
+          <Route path="/sign-out" element={<SignOut />} />
           <Route path="/order" element={<Order />} />
           <Route path="/checkout" element={<Cart />} />
           <Route path="/categories" element={<Category />} />
