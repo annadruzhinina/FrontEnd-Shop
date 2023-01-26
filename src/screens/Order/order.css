@@ -1,0 +1,7 @@
+.order-container {
+    background-color: blue;
+    max-width: 1500px;
+    display: flex;
+    margin: 60px auto;
+
+}
