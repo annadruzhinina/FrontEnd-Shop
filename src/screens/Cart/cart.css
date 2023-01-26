@@ -10,8 +10,8 @@
   margin-bottom: -100px;
 }
 .cart-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1300px;
+  margin: 50px auto;
 }
 .cart-info-title {
   display: flex;
@@ -24,6 +24,10 @@
 
 .checkoutProduct {
   display: flex;
+  margin: 30px;
+  border: 1px solid gray;
+  background-color: #e6d1b7; /* border-radius: 19px; */
+  padding: 25px;
 }
 .pc-image {
   object-fit: contain;

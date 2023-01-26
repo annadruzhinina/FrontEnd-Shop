@@ -21,11 +21,11 @@ export default function Cart() {
           <p className="cp-title">{product.title}</p>
           <p className="cp-description">{product.description}</p>
           <p className="cp-brand">{product.brand}</p>
-          <p className="cp-brand">{product.quantity}</p>
           <p className="cp-price">
             <small>$</small>
             <strong>{product.price}</strong>
           </p>
+          <p className="cp-brand">{product.quantity}</p>
           <button onClick={(e) => removeFromBasket(product)} className="cp-btn">
             Remove from basket
           </button>
