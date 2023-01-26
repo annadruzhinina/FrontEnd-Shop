@@ -24,7 +24,7 @@
   margin-bottom: 10px;
 }
 .product-title {
-  padding-top: 15px;
+  padding-top: 25px;
   padding-bottom: 10px;
   font-weight: bold;
   font-size: 18px;
@@ -49,21 +49,20 @@
 }
 
 .product > button {
-  background-color: rgb(102, 207, 207);
-  border: none;
+  background-color: rgb(149 202 218 / 73%);
+  border: 2px solid rgba(102, 99, 99, 0.191);
   padding: 5px 14px;
   border-radius: 8px;
   font-weight: bold;
 }
-
+.btn-add:hover {
+  background-color: rgba(23, 55, 64, 0.951);
+  color: white;
+}
 button:hover {
   cursor: pointer;
   transform: scale(0.9);
   transition: 0.3s all ease;
-}
-
-.products-list-main {
-  z-index: 1;
 }
 
 .products-list-main {
@@ -72,4 +71,6 @@ button:hover {
   justify-content: space-evenly;
   width: 100%;
   flex-wrap: wrap;
+  z-index: 1;
+  max-width: 1500px;
 }
