@@ -11,7 +11,7 @@ const Category = () => {
   const [filteredProducts, setFilteredProducts] = useState(data);
 
   // if (data.length === 0) return <h1>Loading ... </h1>
-  console.log(data);
+  // console.log(data);
 
   // Mapping through each product category
   const uniqueCategories = [

@@ -1,0 +1,21 @@
+.logOutBox {
+    width: 400px;
+    margin-top: 20px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(21, 38, 49);
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+
+#logOut {
+  background-color: #fb9900;
+  border-radius: 2px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+}

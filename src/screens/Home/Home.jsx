@@ -1,5 +1,7 @@
 //Import Modules
 import React, { useContext } from "react";
+//Import Components
+import Product from "../../components/Product/Product.jsx";
 //Import Context
 import { productDataContext } from "../../App.js";
 import Product from "../../components/Product/Product.jsx";
