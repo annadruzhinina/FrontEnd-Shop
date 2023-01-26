@@ -5,6 +5,7 @@ import { productDataContext } from "../../App.js";
 //Import CSS
 import "./home.css";
 
+import Product from "../../components/Product/Product.jsx";
 //Export Home Function
 export default function Home() {
   //Pull in data using Context
@@ -13,7 +14,8 @@ export default function Home() {
   return (
     <div className="home-container">
       <img src="/image/bg-home_4.png" className="home-banner-img" alt="" />
-      <div className="product-row">
+      <div>
+        <Product products={productData} />
       </div>
     </div>
   );
