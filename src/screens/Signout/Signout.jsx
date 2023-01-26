@@ -1,5 +1,5 @@
 import "./signout.css"
-import { Navigate } from "react-router-dom";
+import { Navigate , useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../Hooks/useLoginContext.js";
 
 function SignOut() {
@@ -14,14 +14,17 @@ function SignOut() {
     console.log("Submitted")
     //Update User with Values
     dispatch({ type: "LOGOUT", payload: null });
+    
+    // const navigate = useNavigate()
     return <Navigate to="/" replace={true} />
+
   }
   //Return component HTML
   return (
     <div className="logoutContainer">
       <div className="logOutBox">
-        <h1 className="SignOut">`Would you like to sign out, {user}?`</h1>
-        <button id="logOut" value="" onClick={()=>handleSubmit}>Sign Out</button>
+        <h1 className="SignOut">Would you like to sign out {user}?</h1>
+        <button id="logOut" value="" onClick={(e)=>handleSubmit(e)}>Sign Out</button>
       </div>
     </div>
   )
