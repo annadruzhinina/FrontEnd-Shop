@@ -8,7 +8,7 @@ import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.jsx";
 import { useStateValue } from "../StateProvider/StateProvider.js";
 import { useAuthContext } from "../../Hooks/useLoginContext.js";
 
-function Navbar() {
+function Navbar({search, handleSearch}) {
   const [{ basket }, dispatch] = useStateValue();
   //Pulled in user hook for useAuthContext
   const { user } = useAuthContext()
@@ -43,7 +43,7 @@ function Navbar() {
       </Link>
 
       <div className="search">
-        <input type="text" className="nav-searchInput" />
+        <input type="text" className="nav-searchInput" onChange={handleSearch} />
         <SearchIcon className="nav-searchIcon" />
       </div>
       <div className="nav-links">
