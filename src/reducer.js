@@ -9,22 +9,72 @@ function reducer(state, action) {
       //...state => state[0], state[1], state[2]
       // state store all objects for React app which is created by useStateValue()
       // basket - one of keys in state object
-      // basket: [...state.basket, action.item] => 
+      // basket: [...state.basket, action.item] =>
       //        1. create new value with name basket in state object
       //        2. Put there all items from state.basket (...state.basket)
-      //        3. Put there action.item. 
-      //           action.item holds product value which we dispatched from Product.addToBasket function 
-      return {
-        ...state,
-        basket: [...state.basket, action.item],
-      };
+      //        3. Put there action.item.
+      //           action.item holds product value which we dispatched from Product.addToBasket function
+
+      const addItems = state.basket.filter(function (item) {
+        return item.title === action.item.title;
+      });
+
+      console.log("Items found", addItems, addItems.length);
+
+      if (addItems.length > 0) {
+        const newBasket = state.basket.map(function (item) {
+          if (item.title === action.item.title) {
+            item.quantity = item.quantity + 1;
+          }
+          return item;
+        });
+
+        return {
+          ...state,
+          basket: newBasket,
+        };
+      } else {
+        action.item.quantity = 1;
+        return {
+          ...state,
+          basket: [...state.basket, action.item],
+        };
+      }
 
       break;
-    case "REMOVE_TO_BASKET":
-      //Logic for removing item from basket
+    case "REMOVE_FROM_BASKET":
+      const removeItems = state.basket.filter(function (item) {
+        return item.title === action.item.title;
+      });
+
+      console.log("Remove Items", removeItems);
+
+      if (removeItems.length > 0 && removeItems[0].quantity > 1) {
+        const newBasket = state.basket.map(function (item) {
+          if (item.title === action.item.title) {
+            item.quantity = item.quantity - 1;
+          }
+          return item;
+        });
+
+        return {
+          ...state,
+          basket: newBasket,
+        };
+      } else {
+        //Logic for removing item from basket
+        const newBasket = state.basket.filter(function (item) {
+          return item.title != action.item.title;
+        });
+
+        console.log(newBasket);
+
+        return { ...state, basket: newBasket };
+      }
+
       break;
     default:
-      return { state };
+      return { ...state };
   }
 }
 

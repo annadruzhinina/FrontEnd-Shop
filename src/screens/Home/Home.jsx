@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 //Import Context
 import { productDataContext } from "../../App.js";
+import Product from "../../components/Product/Product.jsx";
 //Import CSS
 import "./home.css";
 
@@ -13,7 +14,8 @@ export default function Home() {
   return (
     <div className="home-container">
       <img src="/image/bg-home_4.png" className="home-banner-img" alt="" />
-      <div className="product-row">
+      <div>
+        <Product products={productData} />
       </div>
     </div>
   );

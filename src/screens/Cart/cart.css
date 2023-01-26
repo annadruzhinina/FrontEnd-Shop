@@ -1,80 +1,61 @@
 .cart-img {
   width: 100%;
-  margin-bottom: 10px;
-}
-
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  max-height: 400px;
-  min-width: 220px;
-  padding: 15px;
-  width: 300px;
-  background-color: white;
-  z-index: 1;
-  border-radius: 20px 20px 20px 20px;
-  margin-bottom: 30px;
-}
-
-.product-description {
-  height: 100px;
-  margin-bottom: 15px;
-  text-align: justify;
   margin-bottom: 20px;
-  float: left !important;
+  z-index: -1;
 }
-.product-category-text {
-  margin-bottom: 10px;
-}
-.product-title {
-  padding-top: 15px;
-  padding-bottom: 10px;
-  font-weight: bold;
-  font-size: 18px;
-}
-.product-description-text {
-  font-size: 14px;
-}
-.product-price {
-  margin-top: 5px;
-}
-.product-rating {
-  display: flex;
-  flex-direction: row;
-}
-
-.product > img {
+.card-banner-img {
   width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  margin-top: 25px;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -1;
+  margin-bottom: -100px;
+}
+.cart-container {
+  max-width: 1300px;
+  margin: 50px auto;
+}
+.cart-info-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
   margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 900;
 }
 
-.product > button {
-  background-color: rgb(102, 207, 207);
-  border: none;
-  padding: 5px 14px;
+.checkoutProduct {
+  display: flex;
+  margin: 30px;
+  border: 1px solid gray;
+  background-color: #e6d1b791; /* border-radius: 19px; */
+  padding: 25px;
+}
+.pc-image {
+  object-fit: contain;
+  width: 250px;
+  height: 250px;
+}
+
+.cp-info {
+  padding-left: 20px;
+  padding-top: 60px;
+}
+.cp-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.cp-btn {
+  background-color: rgb(149 202 218 / 73%);
+  border: 2px solid rgba(102, 99, 99, 0.191);
+  padding: 5px 10px;
   border-radius: 8px;
   font-weight: bold;
 }
 
-button:hover {
+.cp-btn:hover {
   cursor: pointer;
   transform: scale(0.9);
   transition: 0.3s all ease;
-}
-
-.products-list-main {
-  z-index: 1;
-}
-
-.products-list-main {
-  padding: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  flex-wrap: wrap;
+  background-color: rgba(23, 55, 64, 0.951);
+  color: white;
 }

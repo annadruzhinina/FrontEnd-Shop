@@ -7,6 +7,7 @@ import { useStateValue } from "../StateProvider/StateProvider.js";
 //Product Function
 function Product(props) {
   const [{ basket }, dispatch] = useStateValue();
+
   const addToBasket = (productItem) => {
     console.log("addToBasket", productItem);
     // Add item to the basket
@@ -17,7 +18,7 @@ function Product(props) {
   };
   //Map products data
   const products = props.products?.map((product, index) => {
-    return (   
+    return (
       <div className="product" key={index}>
         <div className="product-description">
           <p className="product-title">{product.title}</p>
@@ -39,4 +40,4 @@ function Product(props) {
   return <div className="products-list-main">{products}</div>;
 }
 //Exports
-export default Product
+export default Product;
