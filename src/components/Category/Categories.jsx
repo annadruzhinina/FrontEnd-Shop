@@ -10,7 +10,7 @@ const Category = () => {
   const [filteredProducts, setFilteredProducts] = useState(data);
 
   // if (data.length === 0) return <h1>Loading ... </h1>
-  console.log(data);
+  // console.log(data);
 
   const uniqueCategories = [
     ...new Set(data.map((product) => product.category))

@@ -7,24 +7,18 @@ function SignOut() {
   const { dispatch } = useAuthContext()
   const { user } = useAuthContext()
   //Handle Submit
-  const handleSubmit = (e) => {
-    //Prevent Page from Reloading
-    e.preventDefault()
-    //Console Log When Submitted
-    console.log("Submitted")
-    //Update User with Values
-    dispatch({ type: "LOGOUT", payload: null });
-    
-    // const navigate = useNavigate()
-    return <Navigate to="/" replace={true} />
-
-  }
+  const navigate = useNavigate()
   //Return component HTML
   return (
     <div className="logoutContainer">
       <div className="logOutBox">
         <h1 className="SignOut">Would you like to sign out {user}?</h1>
-        <button id="logOut" value="" onClick={(e)=>handleSubmit(e)}>Sign Out</button>
+        <div>
+          <button id="logOut" type="button" onClick={(e)=>{
+            navigate("/")
+            dispatch({ type: "LOGOUT", payload: null });
+            }}>Log Out</button> 
+        </div>
       </div>
     </div>
   )
