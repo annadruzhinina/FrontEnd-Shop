@@ -4,7 +4,6 @@ import React, { useContext } from "react";
 import Product from "../../components/Product/Product.jsx";
 //Import Context
 import { productDataContext } from "../../App.js";
-import Product from "../../components/Product/Product.jsx";
 //Import CSS
 import "./home.css";
 
