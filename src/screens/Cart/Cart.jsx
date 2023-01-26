@@ -4,7 +4,14 @@ import { useStateValue } from "../../components/StateProvider/StateProvider.js";
 
 export default function Cart() {
   const [{ basket }, dispatch] = useStateValue();
-  
+  const removeFromBasket = (productItem) => {
+    //remove item from basket...
+    console.log("remove from basket", productItem);
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      item: productItem,
+    });
+  };
   console.log("basket", basket);
   const products = basket?.map((product) => {
     return (
@@ -14,16 +21,15 @@ export default function Cart() {
           <p className="cp-title">{product.title}</p>
           <p className="cp-description">{product.description}</p>
           <p className="cp-brand">{product.brand}</p>
+          <p className="cp-brand">{product.quantity}</p>
           <p className="cp-price">
             <small>$</small>
             <strong>{product.price}</strong>
           </p>
-          <button className="cp-btn">Remove from Card</button>
+          <button onClick={(e) => removeFromBasket(product)} className="cp-btn">
+            Remove from basket
+          </button>
         </div>
-
-        {/* <button onClick={RemoveFromBasket} className="btn-remove">
-          Remove from basket
-        </button> */}
       </div>
     );
   });
@@ -37,39 +43,15 @@ export default function Cart() {
       />
       {basket?.length === 0 ? (
         <div>
-          <h2>Your Shopping Cart is empty</h2>
+          <h2 className="cart-info-title">Your Shopping Cart is empty</h2>
         </div>
       ) : (
         <div>
-          <h2>Your Shopping Cart</h2>
+          <h2 className="cart-info-title">Your Shopping Cart</h2>
         </div>
       )}
 
-      <div>{products}</div>
+      <div className="cart-container">{products}</div>
     </div>
   );
 }
-
-// const products = basket?.map((product) => {
-//   return (
-//     <div className="product" key={product._id}>
-//       <div className="product-description">
-//         <p className="product-title">{product.title}</p>
-//         <p className="product-description-text">{product.description}</p>
-//         <p>{product.brand}</p>
-//         <p className="product-price">
-//           <small>$</small>
-//           <strong>{product.price}</strong>
-//         </p>
-//       </div>
-//       <img src={product.images} alt="" />
-//     </div>
-//   );
-// });
-// return (
-//   <div>
-//     <h1>Checkout</h1>
-//     <div>{products}</div>
-//   </div>
-// );
-// }
