@@ -18,7 +18,7 @@ function Navbar() {
       return (
         <Link to="/sign-out" className="right-link">
           <div className="link-option">
-            <span className="link-option-one">{user ? "Login" : `Hello, ${user}`}</span>
+            <span className="link-option-one">{user ? `Hello, ${user}`: "Login"}</span>
             <span className="link-option-two">Account & Lists</span>
           </div>
         </Link>
@@ -48,13 +48,13 @@ function Navbar() {
         <SearchIcon className="nav-searchIcon" />
       </div>
       <div className="nav-links">
-        <Link to="/sign-in" className="right-link">
+        {/* <Link to="/sign-in" className="right-link">
           <div className="link-option">
             <span className="link-option-one">{user ? `Hello, ${user}` : "Login"}</span>
             <span className="link-option-two">Account&Lists</span>
           </div>
-        </Link>
-
+        </Link> */}
+        {userSignInOut(user)}
         <Link to="/order" className="right-link">
           <div className="link-option">
             <span className="link-option-one">Returns</span>

@@ -19,9 +19,9 @@ function SignOut() {
   //Return component HTML
   return (
     <div className="logoutContainer">
-      <div className="logOutBox" onSubmit={handleSubmit}>
-        <h1 className="SignOut">`Would you like to sign out, ${user}?`</h1>
-        <button id="logOut" value="">Sign Out</button>
+      <div className="logOutBox">
+        <h1 className="SignOut">`Would you like to sign out, {user}?`</h1>
+        <button id="logOut" value="" onClick={()=>handleSubmit}>Sign Out</button>
       </div>
     </div>
   )
