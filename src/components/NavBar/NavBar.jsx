@@ -7,7 +7,7 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.jsx";
 import { useStateValue } from "../StateProvider/StateProvider.js";
 
-function Navbar() {
+function Navbar({search, handleSearch}) {
   const [{ basket }, dispatch] = useStateValue();
 
   return (
@@ -18,7 +18,7 @@ function Navbar() {
       </Link>
 
       <div className="search">
-        <input type="text" className="nav-searchInput" />
+        <input type="text" className="nav-searchInput" onChange={handleSearch} />
         <SearchIcon className="nav-searchIcon" />
       </div>
       <div className="nav-links">

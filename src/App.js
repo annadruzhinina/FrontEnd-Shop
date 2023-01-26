@@ -15,6 +15,7 @@ export const productDataContext = React.createContext();
 
 function App() {
   const [productData, setProductData] = useState([]);
+  const [filteredProductData, setFilteredProductData] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:4000/products")
@@ -31,13 +32,24 @@ function App() {
           };
         });
         setProductData(prodData);
+        setFilteredProductData(prodData);
       });
   }, []);
 
+  const handleSearch = (e) => {
+    const {value} = e.target
+    
+    const results = productData.filter((prod) => {
+      return prod.title.toLowerCase().includes(value.toLowerCase())
+    })
+
+    setFilteredProductData(results)
+  }
+
   return (
     <div className="app">
-      <productDataContext.Provider value={productData}>
-        <Navbar />
+      <productDataContext.Provider value={filteredProductData}>
+        <Navbar handleSearch={handleSearch}/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sign-in" element={<Signin />} />
