@@ -35,7 +35,6 @@ function Navbar() {
     }
   }
 
-
   return (
     <nav className="nav-container">
       <HamburgerMenu />
