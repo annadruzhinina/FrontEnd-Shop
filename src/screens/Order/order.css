@@ -1,7 +1,69 @@
 .order-container {
     background-color: white;
-    max-width: 1500px;
+    max-width: 1200px;
     display: flex;
+    flex-direction: column;
     margin: 60px auto;
+  
+    margin: 60px auto;
+  }
+  .order-number {
+    padding: 10px 30px;
+    background-color: #e8e5e5;
+    font-size: 12px;
+  }
+  
+  .order-description {
+    display: flex;
+    padding: 35px;
+  }
+  
+  .order-btn {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  
+  .order-data {
+    font-size: 22px;
+    margin: 20px;
+    font-weight: bold;
+  }
+  
+  .order-img {
+    margin-right: 40px;
+  }
+  
+  .order-img-description {
+    max-width: 700px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 
-}
+  }
+  p {
+    max-width: 980px!important;
+    color: rgb(20, 69, 110);
+    font-weight: bold;
+  }
+
+  .btn1 {
+    background-color: rgb(149 202 218 / 73%);
+    border: 2px solid rgba(102, 99, 99, 0.191);
+    padding: 5px 14px;
+   
+    margin-bottom: 10px;
+    
+  }
+  .btn1:hover {
+    background-color: rgba(23, 55, 64, 0.951);
+    color: white;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.3s all ease;
+  }
+  .spanSpace {
+    margin-top: 50px;
+  }
+
+  

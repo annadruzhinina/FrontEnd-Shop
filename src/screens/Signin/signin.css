@@ -46,12 +46,21 @@ input[type="submit"]:hover {
 
 #submitCredentials {
   background-color: rgb(149 202 218 / 73%);
-  border: 2px solid rgba(102, 99, 99, 0.191);
-  padding: 5px 32px;
-  border-radius: 8px;
-  font-size: 17px;
-  margin-top: 17px;
-  margin-bottom: 10px;
+    border: 2px solid rgba(102, 99, 99, 0.191);
+    padding: 7px 36px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 17px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+#submitCredentials:hover {
+  background-color: rgba(71, 107, 117);
+  color: white;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: 0.3s all ease;
 }
 
 .SigninLogo {
