@@ -22,6 +22,7 @@ function reducer(state, action) {
       break;
     case "REMOVE_TO_BASKET":
       //Logic for removing item from basket
+      
       break;
     default:
       return { state };

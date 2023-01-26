@@ -18,34 +18,34 @@ function App() {
 
   useEffect(() => {
     fetch("http://localhost:4000/products")
-    .then(res => res.json())
-    .then(data => {
-      let prodData = data.map((product, index) => {
-        return {
-          "title": product.title,
-          "description": product.description,
-          "price": product.price,
-          "brand": product.brand,
-          "category": product.category,
-          "images": product.images
-        }
+      .then((res) => res.json())
+      .then((data) => {
+        let prodData = data.map((product, index) => {
+          return {
+            title: product.title,
+            description: product.description,
+            price: product.price,
+            brand: product.brand,
+            category: product.category,
+            images: product.images,
+          };
+        });
+        setProductData(prodData);
       });
-      setProductData(prodData);
-    })
-  }, [])
+  }, []);
 
   return (
     <div className="app">
       <productDataContext.Provider value={productData}>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sign-in" element={<Signin />} />
-        <Route path="/order" element={<Order />} />
-        <Route path="/checkout" element={<Cart />} />
-        <Route path="/categories" element={<Category />} />
-        <Route path="/categories/technology/:id" element={<Category />} />
-      </Routes>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sign-in" element={<Signin />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/checkout" element={<Cart />} />
+          <Route path="/categories" element={<Category />} />
+          <Route path="/categories/technology/:id" element={<Category />} />
+        </Routes>
       </productDataContext.Provider>
     </div>
   );
