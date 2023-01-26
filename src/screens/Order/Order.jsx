@@ -29,9 +29,9 @@ Return or replace items: Eligible through February 14, 2023
 </span>
       </div>
       <div className="order-btn">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+        <button className="btn1">Return or replace items</button>
+        <button className="btn1">Get help</button>
+        <button classname="btn1">Write Review</button>
       </div>
     </div>
   </div>
