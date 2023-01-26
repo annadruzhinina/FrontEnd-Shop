@@ -20,7 +20,7 @@ function SignOut() {
   return (
     <div className="logoutContainer">
       <div className="logOutBox" onSubmit={handleSubmit}>
-        <h1 className="SignOut">`Would you like to sign out, ${user}`</h1>
+        <h1 className="SignOut">`Would you like to sign out, ${user}?`</h1>
         <button id="logOut" value="">Sign Out</button>
       </div>
     </div>
