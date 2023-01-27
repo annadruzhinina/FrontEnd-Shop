@@ -1,31 +1,42 @@
+// Import React
 import React, { useState, useContext } from "react";
+// Import Contexts
 import { productDataContext } from "../../App.js";
-import "../HamburgerMenu/hamburgerMenu.css";
-import "./categories.css";
+// Import Components 
 import Product from "../Product/Product.jsx";
+// Import CSS
+import "./categories.css";
+import "../HamburgerMenu/hamburgerMenu.css";
 
+// Category Component
 const Category = () => {
+  // Assign context
   const data = useContext(productDataContext);
+  
+  // Set useStates
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState(data);
 
-  // console.log("Data", data);
-  // console.log("Filtered", filteredProducts);
-
+  // Map unique categories
   const uniqueCategories = [
     ...new Set(data.map((product) => product.category)),
   ];
 
+  // Handle onClick event
   const handleCategoryClick = (category) => {
+    // Set category data
     setSelectedCategory(category);
+    // Set filtered data
     setFilteredProducts(
       data.filter((product) => product.category === category)
     );
   };
+
   return (
     <div className="category-container">
       <div className="category-nav ">
         <div className="container">
+          {/* Map category for nav-menu */}
           <div className="category-nav-menu">
             {uniqueCategories.map((category, index) => (
               <button
@@ -39,6 +50,7 @@ const Category = () => {
           </div>
         </div>
       </div>
+      {/* Filter Products */}
       <Product
         products={filteredProducts.length === 0 ? data : filteredProducts}
       />
@@ -46,4 +58,5 @@ const Category = () => {
   );
 };
 
+// Export Category Component
 export default Category;

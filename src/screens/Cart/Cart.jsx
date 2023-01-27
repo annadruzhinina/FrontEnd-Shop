@@ -1,19 +1,23 @@
+// Import react
 import React from "react";
-import "./cart.css";
+// Import State Provider
 import { useStateValue } from "../../components/StateProvider/StateProvider.js";
+// Import CSS
+import "./cart.css";
 
+// Export Cart Component
 export default function Cart() {
+  // Set useState Value
   const [{ basket }, dispatch] = useStateValue();
+  // Function to remove items from basket
   const removeFromBasket = (productItem) => {
     //remove item from basket...
-    console.log("remove from basket", productItem);
     dispatch({
       type: "REMOVE_FROM_BASKET",
       item: productItem,
     });
   };
-  console.log("basket", basket);
-
+  // Map basket to products
   const products = basket?.map((product) => {
     return (
       <div className="checkoutProduct">
@@ -33,6 +37,7 @@ export default function Cart() {
             <strong>Qty: </strong>
             {product.quantity}
           </p>
+          {/* Remove items from Cart */}
           <button onClick={(e) => removeFromBasket(product)} className="cp-btn">
             Remove from Cart
           </button>
@@ -40,13 +45,12 @@ export default function Cart() {
       </div>
     );
   });
-  console.log("products", products);
   // basket?. -> if basket null or Nan - it will not execute .reduce.
   const totalCost = basket?.reduce(
     (total, item) => total + item.price * item.quantity,
     0
   );
-  console.log("Total Cost " + totalCost);
+
   return (
     <div>
       <img
@@ -54,6 +58,7 @@ export default function Cart() {
         src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8b77bd111102863.5ffc0a48e1780.jpg"
         alt=""
       />
+      {/* ternary statement to show items in cart if not empty */}
       {basket?.length === 0 ? (
         <div>
           <h2 className="cart-info-title">Your Shopping Cart is empty</h2>
@@ -64,7 +69,6 @@ export default function Cart() {
         </div>
       )}
       <h3 className="order-subtotal">Total cost: ${totalCost}</h3>
-
       <div className="cart-container">{products}</div>
     </div>
   );

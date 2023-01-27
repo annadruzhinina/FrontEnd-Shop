@@ -1,9 +1,11 @@
-//Imports
+// Import React
 import React from "react";
+// Import CSS
 import "./order.css";
 
-//Export Order Function
+// Export Order Function
 export default function Order() {
+  // Hard coded data as a placeholder for future
   return (
     <div>
       <div className="order-container">
@@ -13,9 +15,6 @@ export default function Order() {
       </h1>
     </div>
     <div className="order-description">
-      {/* <div className="order-img-contianer">
-        <h1>Delivered January 15</h1>
-      </div> */}
       <div className="order-img">
         <img src="https://m.media-amazon.com/images/I/513Oc5KIHNL._SS142_.jpg" alt="" />
       </div>
@@ -43,9 +42,6 @@ Return or replace items: Eligible through February 14, 2023
       </h1>
     </div>
     <div className="order-description">
-      {/* <div className="order-img-contianer">
-        <h1>Delivered January 15</h1>
-      </div> */}
       <div className="order-img">
         <img src="https://m.media-amazon.com/images/I/416jskfpojL._SS142_.jpg" alt="" />
       </div>
@@ -74,9 +70,6 @@ Return or replace items: Eligible through February 14, 2023
       </h1>
     </div>
     <div className="order-description">
-      {/* <div className="order-img-contianer">
-        <h1>Delivered January 15</h1>
-      </div> */}
       <div className="order-img">
         <img src="https://m.media-amazon.com/images/I/41FWr5DluEL._SS142_.jpg" alt="" />
       </div>

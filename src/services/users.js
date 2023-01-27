@@ -1,4 +1,4 @@
-// Imports
+// Import API
 import api from "./apiConfig.js";
 
 // Exports all users

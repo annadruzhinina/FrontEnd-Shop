@@ -1,10 +1,10 @@
-//Import React
+// Import React
 import React from "react";
-//Import Icons
+// Import Icons
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 
-//Define Sidebar Menu
+// Define Sidebar Menu
 export const SidebarData = [
   {
     title: "Home",

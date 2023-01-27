@@ -1,20 +1,29 @@
-// Imports
+// Import React
 import React from "react";
-import "./hamburgerMenu.css";
 import { useState } from "react";
+// Import React Router Dom
+import { Link } from "react-router-dom";
+// Import React Icons
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
-import { SidebarData } from "../SidebarData/SidebarData.jsx";
 import { IconContext } from "react-icons";
+// Import Component
+import { SidebarData } from "../SidebarData/SidebarData.jsx";
+// Import CSS
+import "./hamburgerMenu.css";
 
+// Hamburger Menu Component
 function HamburgerMenu() {
+  // Set useState
   const [sidebar, setSidebar] = useState(false);
+  // Sidebar Function
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
     <>
+      {/* Icon provider - color white */}
       <IconContext.Provider value={{ color: "#fff" }}>
+        {/* Create Hamburger Menu Link */}
         <div className="hamburger">
           <Link to="#" className="hamburger-menu">
             <FaIcons.FaBars onClick={showSidebar} />
@@ -37,7 +46,6 @@ function HamburgerMenu() {
                 </li>
               );
             })}
-            {/* Add categories links */}
           </ul>
         </nav>
       </IconContext.Provider>
@@ -45,4 +53,5 @@ function HamburgerMenu() {
   );
 }
 
+// Export Hamburger Menu Component
 export default HamburgerMenu;
