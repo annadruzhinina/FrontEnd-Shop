@@ -39,5 +39,9 @@ function Product(props) {
   });
   return <div className="products-list-main">{products}</div>;
 }
+
+
+
+
 //Exports
 export default Product;

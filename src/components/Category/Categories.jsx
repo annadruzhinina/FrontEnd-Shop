@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { productDataContext } from "../../App.js";
 import "../HamburgerMenu/hamburgerMenu.css";
 import "./categories.css";
@@ -10,10 +10,11 @@ const Category = () => {
   const [filteredProducts, setFilteredProducts] = useState(data);
 
   // if (data.length === 0) return <h1>Loading ... </h1>
-  console.log(data);
+  // console.log(data);
+  useEffect(() => {}, [data]);
 
   const uniqueCategories = [
-    ...new Set(data.map((product) => product.category))
+    ...new Set(data.map((product) => product.category)),
   ];
 
   const handleCategoryClick = (category) => {
@@ -22,7 +23,8 @@ const Category = () => {
       data.filter((product) => product.category === category)
     );
   };
-  // if (filteredProducts.length === 0) return <h1>Loading 2 ... </h1>
+  // if (!data.length) return <h1>Loading 2 ... </h1>;
+
   return (
     <>
       <div className="category-container">
@@ -30,7 +32,8 @@ const Category = () => {
           <div className="container">
             <div className="category-nav-menu">
               {uniqueCategories.map((category, index) => (
-                <button key={index}
+                <button
+                  key={index}
                   className="category-link"
                   onClick={() => handleCategoryClick(category)}
                 >
@@ -43,7 +46,7 @@ const Category = () => {
         <Product products={filteredProducts} />
       </div>
     </>
-  );          
+  );
 };
 
 export default Category;

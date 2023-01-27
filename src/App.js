@@ -17,7 +17,7 @@ function App() {
   const [productData, setProductData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/products")
+    fetch("/products")
       .then((res) => res.json())
       .then((data) => {
         let prodData = data.map((product, index) => {
