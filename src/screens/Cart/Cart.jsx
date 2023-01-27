@@ -13,10 +13,14 @@ export default function Cart() {
     });
   };
   console.log("basket", basket);
+
   const products = basket?.map((product) => {
     return (
       <div className="checkoutProduct">
-        <img className="pc-image" src={product.images} alt="" />
+        <div className="left-side">
+          <img className="pc-image" src={product.images} alt="" />
+        </div>
+
         <div className="cp-info">
           <p className="cp-title">{product.title}</p>
           <p className="cp-description">{product.description}</p>
@@ -25,7 +29,10 @@ export default function Cart() {
             <small>$</small>
             <strong>{product.price}</strong>
           </p>
-          <p className="cp-brand">{product.quantity}</p>
+          <p className="cp-qty">
+            <strong>Qty: </strong>
+            {product.quantity}
+          </p>
           <button onClick={(e) => removeFromBasket(product)} className="cp-btn">
             Remove from basket
           </button>
@@ -34,6 +41,12 @@ export default function Cart() {
     );
   });
   console.log("products", products);
+  // basket?. -> if basket null or Nan - it will not execute .reduce.
+  const totalCost = basket?.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+  console.log("Total Cost " + totalCost);
   return (
     <div>
       <img
@@ -50,6 +63,7 @@ export default function Cart() {
           <h2 className="cart-info-title">Your Shopping Cart</h2>
         </div>
       )}
+      <h3 className="order-subtotal">Total cost: ${totalCost}</h3>
 
       <div className="cart-container">{products}</div>
     </div>
