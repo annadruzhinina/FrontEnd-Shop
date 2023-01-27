@@ -58,4 +58,5 @@ const Category = () => {
   );
 };
 
+// Export Category Component
 export default Category;

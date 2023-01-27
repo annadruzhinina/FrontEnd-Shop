@@ -1,19 +1,29 @@
-// Imports
+// Import React
 import React from "react";
-import "./navBar.css";
-import { Link } from "react-router-dom";
+// Import React Icons
 import SearchIcon from "@mui/icons-material/Search";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+// Import React-Router-Dom
+import { Link } from "react-router-dom";
+// Import CSS
+import "./navBar.css";
+// Import Components
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.jsx";
+// Import Contexts
 import { useStateValue } from "../StateProvider/StateProvider.js";
 import { useAuthContext } from "../../Hooks/useLoginContext.js";
 
+// Navbar Component
 function Navbar({ search, handleSearch }) {
+  // Set useState
   const [{ basket }, dispatch] = useStateValue();
-  //Pulled in user hook for useAuthContext
+  
+  // Pulled in user hook for useAuthContext
   const { user } = useAuthContext();
-
+  
+  // Set Sign-in/Sign-out function
   function userSignInOut(user) {
+    // Conditional for if user is logged in
     if (user) {
       return (
         <Link to="/sign-out" className="right-link">
@@ -38,7 +48,7 @@ function Navbar({ search, handleSearch }) {
       );
     }
   }
-
+  // Set total items variable
   const totalItems = basket?.reduce((total, item) => total + item.quantity, 0);
 
   return (
@@ -47,7 +57,6 @@ function Navbar({ search, handleSearch }) {
       <Link to="/" className="nav-link">
         <img src="./image/logoNew.png" className="nav-logo" alt="" />
       </Link>
-
       <div className="search">
         <input
           type="text"
@@ -57,12 +66,6 @@ function Navbar({ search, handleSearch }) {
         <SearchIcon className="nav-searchIcon" />
       </div>
       <div className="nav-links">
-        {/* <Link to="/sign-in" className="right-link">
-          <div className="link-option">
-            <span className="link-option-one">{user ? `Hello, ${user}` : "Login"}</span>
-            <span className="link-option-two">Account&Lists</span>
-          </div>
-        </Link> */}
         {userSignInOut(user)}
         <Link to="/order" className="right-link">
           <div className="link-option">
@@ -70,7 +73,6 @@ function Navbar({ search, handleSearch }) {
             <span className="link-option-two">&Orders</span>
           </div>
         </Link>
-
         <Link to="/checkout" className="right-link">
           <div className="link-option-cart">
             <LocalGroceryStoreIcon />
@@ -81,5 +83,5 @@ function Navbar({ search, handleSearch }) {
     </nav>
   );
 }
-//Export Navbar
+// Export Navbar
 export default Navbar;
