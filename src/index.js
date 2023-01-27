@@ -1,3 +1,4 @@
+// Imports
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -10,7 +11,7 @@ import { AuthContextProvider } from "./Context/LoginContexts.js"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  // // <React.StrictMode>
+  // <React.StrictMode>
   <Router>
       <AuthContextProvider>
       <StateProvider initialState={initialState} reducer={reducer}>
@@ -18,7 +19,7 @@ root.render(
       </StateProvider>
       </AuthContextProvider>
   </Router>
-  // // </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
