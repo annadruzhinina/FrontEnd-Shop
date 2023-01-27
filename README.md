@@ -1,4 +1,3 @@
-<<<<<<< dev
 # GA Express - Front-End Shop
 
 ![GA Express Logo](./public/image/logoNew.png)
@@ -116,60 +115,6 @@ Front-End (All)
 ## Wire Frame 
 
 ![Wire Frame](./public/image/Wireframe.png)
-=======
-# FrontEnd-Shop 
-
-Description - This is the Comfy Coders FrontEnd React Repository.
-
-# Our Logo 
-
-![alt]()
-
-# WireFrame 
-
-![alt text]()
-
-# Final Product
-![alt text]()
-
-# Endpoints
-
-* (Home Page)http://localhost:3000/ 
-* (Categories Page)http://localhost:3000/categories 
-* (Orders Page)http://localhost:3000/order
-* (SignIn Page)http://localhost:3000/sign-in
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> main
 
 # Team 
 
@@ -198,9 +143,3 @@ GitHub: https://github.com/muhammadwarrad
 LinkedIn: https://www.linkedin.com/in/ryanehrlich/
 
 GitHub: https://github.com/Jagerziel
-
-<<<<<<< dev
-![Team Photo](./public/image/Group_Photo_GA_Express.jpg)
-=======
-
->>>>>>> main
