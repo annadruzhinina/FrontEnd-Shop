@@ -34,7 +34,7 @@ export default function Cart() {
             {product.quantity}
           </p>
           <button onClick={(e) => removeFromBasket(product)} className="cp-btn">
-            Remove from basket
+            Remove from Cart
           </button>
         </div>
       </div>
