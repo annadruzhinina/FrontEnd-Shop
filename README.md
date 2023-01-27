@@ -1,6 +1,6 @@
 # GA Express - Front-End Shop
 
-![GA Express Logo](./public/image/FrontEnd-Logo.jpg)
+![GA Express Logo](./public/image/logoNew.png)
 
 The GA Express site is an e-commerce site which promotes the sales of the best products available on the market.  This project is tied to a back-end also built by our group and includes many features as detailed below.
 
