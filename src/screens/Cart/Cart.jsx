@@ -56,11 +56,11 @@ export default function Cart() {
       />
       {basket?.length === 0 ? (
         <div>
-          <h2 className="cart-info-title">Your Shopping Cart is empty</h2>
+          <h2 className="cart-info-title">Your Basket Is Empty</h2>
         </div>
       ) : (
         <div>
-          <h2 className="cart-info-title">Your Shopping Cart</h2>
+          <h2 className="cart-info-title">Your Basket</h2>
         </div>
       )}
       <h3 className="order-subtotal">Total cost: ${totalCost}</h3>
