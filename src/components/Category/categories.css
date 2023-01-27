@@ -35,7 +35,7 @@
 .category-link:hover {
   background-color: rgba(255, 228, 196, 0.758);
   color: black;
-  transform: scale(0.9);
+  transform: scale(1.1);
   transition: 0.3s all ease;
 }
 
@@ -88,7 +88,7 @@
 
 button:hover {
   cursor: pointer;
-  transform: scale(0.9);
+  transform: scale(1.1);
   transition: 0.3s all ease;
   background-color: rgba(23, 55, 64, 0.951);
   color: white;

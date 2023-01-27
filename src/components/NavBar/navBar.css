@@ -59,6 +59,7 @@
   height: 25px;
   border-radius: 0 !important;
   margin-bottom: 0 !important;
+  outline: none;
 }
 .nav-searchIcon {
   background-color: rgb(149, 202, 218);
