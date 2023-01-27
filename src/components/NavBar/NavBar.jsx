@@ -45,7 +45,7 @@ function Navbar({ search, handleSearch }) {
     <nav className="nav-container">
       <HamburgerMenu />
       <Link to="/" className="nav-link">
-        <img src="./image/amazon.png" className="nav-logo" alt="" />
+        <img src="./image/FrontEnd-Logo.jpg" className="nav-logo" alt="" />
       </Link>
 
       <div className="search">
