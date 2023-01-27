@@ -143,3 +143,4 @@ GitHub: https://github.com/muhammadwarrad
 LinkedIn: https://www.linkedin.com/in/ryanehrlich/
 
 GitHub: https://github.com/Jagerziel
+![Team Photo](./public/image/Group_Photo_GA_Express.jpg)
