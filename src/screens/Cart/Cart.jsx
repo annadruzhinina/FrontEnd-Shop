@@ -1,19 +1,23 @@
+// Import react
 import React from "react";
-import "./cart.css";
+// Import State Provider
 import { useStateValue } from "../../components/StateProvider/StateProvider.js";
+// Import CSS
+import "./cart.css";
 
+// Export Cart Component
 export default function Cart() {
+  // Set useState Value
   const [{ basket }, dispatch] = useStateValue();
+  // Function to remove items from basket
   const removeFromBasket = (productItem) => {
     //remove item from basket...
-    console.log("remove from basket", productItem);
     dispatch({
       type: "REMOVE_FROM_BASKET",
       item: productItem,
     });
   };
-  console.log("basket", basket);
-
+  // Map basket to products
   const products = basket?.map((product) => {
     return (
       <div className="checkoutProduct">
@@ -40,13 +44,12 @@ export default function Cart() {
       </div>
     );
   });
-  console.log("products", products);
   // basket?. -> if basket null or Nan - it will not execute .reduce.
   const totalCost = basket?.reduce(
     (total, item) => total + item.price * item.quantity,
     0
   );
-  console.log("Total Cost " + totalCost);
+  
   return (
     <div>
       <img
