@@ -48,10 +48,10 @@ function reducer(state, action) {
       // Break switch case
       break;
     case "REMOVE_FROM_BASKET":
+      // Filter and remove item
       const removeItems = state.basket.filter(function (item) {
         return item.title === action.item.title;
       });
-
       if (removeItems.length > 0 && removeItems[0].quantity > 1) {
         const newBasket = state.basket.map(function (item) {
           if (item.title === action.item.title) {
@@ -59,7 +59,6 @@ function reducer(state, action) {
           }
           return item;
         });
-
         return {
           ...state,
           basket: newBasket,
@@ -74,11 +73,12 @@ function reducer(state, action) {
 
         return { ...state, basket: newBasket };
       }
-
+      // Break switch case
       break;
     default:
       return { ...state };
   }
 }
 
+// Export reducer function
 export default reducer;
