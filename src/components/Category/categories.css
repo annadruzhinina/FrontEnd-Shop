@@ -8,7 +8,7 @@
   position: sticky;
   background-color: rgba(0, 0, 0, 0.795);
   width: 100%;
-  top: 56px;
+  top: 50px;
   z-index: 100;
 }
 
@@ -54,16 +54,7 @@
   padding-top: 60px;
   padding: 30px;
   background-color: white;
-  /* aspect-ratio: 3/2;
-  object-fit: contain;
-  mix-blend-mode: color-burn; */
 }
-/* .product-description-category {
-  height: 100px;
-  margin-bottom: 15px;
-  text-align: justify;
-  /* min-height: 300px; 
-} */
 
 .product-list {
   padding: 30px;
