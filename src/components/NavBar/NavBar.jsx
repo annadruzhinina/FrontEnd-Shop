@@ -8,32 +8,38 @@ import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.jsx";
 import { useStateValue } from "../StateProvider/StateProvider.js";
 import { useAuthContext } from "../../Hooks/useLoginContext.js";
 
-function Navbar({search, handleSearch}) {
+function Navbar({ search, handleSearch }) {
   const [{ basket }, dispatch] = useStateValue();
   //Pulled in user hook for useAuthContext
-  const { user } = useAuthContext()
+  const { user } = useAuthContext();
 
-  function userSignInOut (user) {
+  function userSignInOut(user) {
     if (user) {
       return (
         <Link to="/sign-out" className="right-link">
           <div className="link-option">
-            <span className="link-option-one">{user ? `Hello, ${user}`: "Login"}</span>
+            <span className="link-option-one">
+              {user ? `Hello, ${user}` : "Login"}
+            </span>
             <span className="link-option-two">Account & Lists</span>
           </div>
         </Link>
-      )
+      );
     } else {
       return (
         <Link to="/sign-in" className="right-link">
           <div className="link-option">
-            <span className="link-option-one">{user ? `Hello, ${user}` : "Login"}</span>
+            <span className="link-option-one">
+              {user ? `Hello, ${user}` : "Login"}
+            </span>
             <span className="link-option-two">Account & Lists</span>
           </div>
         </Link>
-      )
+      );
     }
   }
+
+  const totalItems = basket?.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <nav className="nav-container">
@@ -43,7 +49,11 @@ function Navbar({search, handleSearch}) {
       </Link>
 
       <div className="search">
-        <input type="text" className="nav-searchInput" onChange={handleSearch} />
+        <input
+          type="text"
+          className="nav-searchInput"
+          onChange={handleSearch}
+        />
         <SearchIcon className="nav-searchIcon" />
       </div>
       <div className="nav-links">
@@ -64,7 +74,7 @@ function Navbar({search, handleSearch}) {
         <Link to="/checkout" className="right-link">
           <div className="link-option-cart">
             <LocalGroceryStoreIcon />
-            <span className="link-option-two cart-count">{basket.length}</span>
+            <span className="link-option-two cart-count">{totalItems}</span>
           </div>
         </Link>
       </div>

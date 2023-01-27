@@ -10,12 +10,12 @@ const Category = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState(data);
 
-  // if (data.length === 0) return <h1>Loading ... </h1>
-  // console.log(data);
+  // console.log("Data", data);
+  // console.log("Filtered", filteredProducts);
 
   // Mapping through each product category
   const uniqueCategories = [
-    ...new Set(data.map((product) => product.category))
+    ...new Set(data.map((product) => product.category)),
   ];
 
   // Showing products from each category when clicked  
@@ -25,29 +25,28 @@ const Category = () => {
       data.filter((product) => product.category === category)
     );
   };
-
   return (
-    <>
-      <div className="category-container">
-        <div className="category-nav ">
-          <div className="container">
-            <div className="category-nav-menu">
-              {uniqueCategories.map((category, index) => (
-                <button
-                  key={index}
-                  className="category-link"
-                  onClick={() => handleCategoryClick(category)}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+    <div className="category-container">
+      <div className="category-nav ">
+        <div className="container">
+          <div className="category-nav-menu">
+            {uniqueCategories.map((category, index) => (
+              <button
+                key={index}
+                className="category-link"
+                onClick={() => handleCategoryClick(category)}
+              >
+                {category}
+              </button>
+            ))}
           </div>
         </div>
-        <Product products={filteredProducts} />
       </div>
-    </>
-  );          
+      <Product
+        products={filteredProducts.length === 0 ? data : filteredProducts}
+      />
+    </div>
+  );
 };
 
 // Export Category

@@ -32,7 +32,7 @@ function Product(props) {
         </div>
         <img src={product.images} alt="" />
         <button onClick={(e) => addToBasket(product)} className="btn-add">
-          Add to basket
+          Add to Cart
         </button>
       </div>
     );
