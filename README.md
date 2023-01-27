@@ -9,16 +9,16 @@ The GA Express site is an e-commerce site which promotes the sales of the best p
 ### Home Page
 ![Home Page](./public/image/Home_Page_Screenshot_1.png)
 
-## Categories
+### Categories
 ![Categories Page](./public/image/Home_Page_Screenshot_2.png)
 
-## Sign-In
+### Sign-In
 ![Sign-In Page](./public/image/Home_Page_Screenshot_3.png)
 
-## Cart
+### Cart
 ![Cart Page](./public/image/Home_Page_Screenshot_5.png)
 
-## Orders
+### Orders
 ![Orders Page](./public/image/Home_Page_Screenshot_4.png)
 
 ## Pages
@@ -104,12 +104,13 @@ Front-End (All)
 
 ## API Data
 
-Snippet of object output:
-![API Screenshot](./public/image/Backend_API_Screenshot.png)
-
 ### API Endpoints
 
-1) Home:  http://localhost:4000/products
+- Home:  http://localhost:4000/products
+
+### Snippet of object output:
+![API Screenshot](./public/image/Backend_API_Screenshot.png)
+
 
 ## Wire Frame 
 
