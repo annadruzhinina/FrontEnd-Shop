@@ -6,7 +6,6 @@ import Product from "../../components/Product/Product.jsx";
 import { productDataContext } from "../../App.js";
 //Import CSS
 import "./home.css";
-
 //Export Home Function
 export default function Home() {
   //Pull in data using Context
