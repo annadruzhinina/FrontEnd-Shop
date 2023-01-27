@@ -1,0 +1,18 @@
+.home-container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-banner-img {
+  width: 100%;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -1;
+  margin-bottom: -100px;
+}
+
+.product-column {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}

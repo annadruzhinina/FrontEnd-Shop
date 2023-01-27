@@ -1,0 +1,86 @@
+.category-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.category-nav {
+  position: sticky;
+  background-color: rgba(0, 0, 0, 0.795);
+  width: 100%;
+  top: 50px;
+  z-index: 100;
+}
+
+.category-nav-menu {
+  display: flex;
+  position: sticky;
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  padding: 8px 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.category-link:hover {
+  background-color: rgba(255, 228, 196, 0.758);
+  color: black;
+  transform: scale(1.1);
+  transition: 0.3s all ease;
+}
+
+.category-card {
+  width: 30%;
+  margin: 10px;
+}
+
+.product-img {
+  width: 250px;
+  height: 250px;
+}
+
+.category-img-container {
+  width: 100%;
+  padding-top: 60px;
+  padding: 30px;
+  background-color: white;
+}
+
+.product-list {
+  padding: 30px;
+  --n: 3; /* number of rows*/
+  --m: 3; /* number of columns */
+  --g: 20px; /* control the gap */
+  --f: 1.5; /* control the scale factor */
+
+  display: grid;
+  gap: var(--g);
+  width: calc(var(--m) * var(--s) + (var(--m) - 1) * var(--g));
+  height: calc(var(--n) * var(--s) + (var(--n) - 1) * var(--g));
+  grid-template-columns: repeat(var(--m), auto);
+}
+.product > button {
+  background-color: rgb(149 202 218 / 73%);
+  border: 2px solid rgba(102, 99, 99, 0.191);
+  padding: 5px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s all ease;
+  background-color: rgba(23, 55, 64, 0.951);
+  color: white;
+}
