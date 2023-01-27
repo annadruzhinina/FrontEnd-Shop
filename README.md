@@ -56,27 +56,64 @@ The API provided several fields of data but the only fields used for this projec
 
 ## Overview of Process
 
-- Pull Information from the API
-- Clean data for Habitat as the API provided it in HTML format
+### Stage 0 - Planning (All)
+Established what we would pursue, developed a wireframe, outlined component swap on the front-end, determined what we needed at a minimum to be released for the back-end to begin testing, set timelines for when we hoped to achieve each state.
 
-### Pulling the data from the API
+### Stage 1 - Initial Set-Up
+Backend (Muhammad, Angela, Ryan)
+- Constructed Skeleton for folders and file structure
+- Created JSON with raw data
+
+Front-End (Anna, Bryant)
+- Constructed skeleton for folders and file structure
+- Created JSON with data to use while Backend was being constructed
+
+*Goal:  Working on these items allowed us to get to a point where we could divide work and pair program*
+
+### Stage 2 - Get Backend Running, Front-end Development
+Backend (Muhammad, Angela, Ryan)
+- Completed Products CRUD and shell for Users
+Tested & moved to main branch for use on Front-End
+
+Front-End (Anna, Bryant)
+- Connected Links and Navigation and prepared to connect with back-end
+
+*Goal:  We wanted to ensure the back end was working in order to test data on the front end.*
+
+### Stage 3 - Connect Front and Back End, Continue to build out Front-End
+Backend (Anna, Bryant, Ryan)
+- Included code for User-Authentication
+
+Front-End (Muhammad, Angela, Ryan)
+- Connected Back-End to Front-End
+- Added features/components for including all products, navigate by products, cart count for items
+
+*Goal:  We worked to ensure the site was in working order with the basic features we wanted to achieve.*  
+
+### Stage 4 - Enhance Backend Data and Finalize Front End
+Backend (Muhammad, Angela)
+- Updated JSON to include additional items
+
+Front-End (All)
+- Added additional features for login/logout, search navigation, cart counter and item deletion
+- Added Logo!
+- Merged and tested on all machines that we were all able to access 
+- Ensured README was updated and code was commented
+
+*Goal:  Finalized project and prepared for presenting*
+
+## API Data
 
 Snippet of object output:
-![All Data](./public/Images/RM_Img4.jpg)
+![API Screenshot](./public/image/Backend_API_Screenshot.png)
 
+### API Endpoints
 
+1) Home:  http://localhost:4000/products
 
-# Endpoints
+## Wire Frame 
 
-* (Home Page)http://localhost:3000/ 
-* (Categories Page)http://localhost:3000/categories 
-* (Orders Page)http://localhost:3000/order
-* (SignIn Page)http://localhost:3000/sign-in
-
-## WireFrame 
-
-![alt text](./public/image/Wireframe.png)
-
+![Wire Frame](./public/image/Wireframe.png)
 
 # Team 
 
@@ -106,4 +143,4 @@ LinkedIn: https://www.linkedin.com/in/ryanehrlich/
 
 GitHub: https://github.com/Jagerziel
 
-
+![Team Photo](./public/image/Group_Photo_GA_Express.jpg)
