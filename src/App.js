@@ -19,11 +19,7 @@ function App() {
   const [filteredProductData, setFilteredProductData] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:4000/products", {
-      mode: 'cors', // no-cors, *cors, same-origin
-      headers: {
-        'Content-Type': 'application/json'
-      }})
+    fetch("http://localhost:4000/products")
       .then((res) => res.json())
       .then((data) => {
         let prodData = data.map((product, index) => {
