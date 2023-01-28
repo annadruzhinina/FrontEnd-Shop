@@ -11,6 +11,9 @@ import Order from "./screens/Order/Order.jsx";
 import Cart from "./screens/Cart/Cart.jsx";
 import Category from "./components/Category/Categories.jsx";
 
+// Import Deployed API from URL
+import api from './services/apiConfig.js'
+
 // Import CSS
 import "./App.css";
 
@@ -24,7 +27,7 @@ function App() {
 
   // Pull information from API
   useEffect(() => {
-    fetch("http://localhost:4000/products")
+    fetch(api.defaults.baseURL)
       .then((res) => res.json())
       .then((data) => {
         let prodData = data.map((product, index) => {

@@ -7,8 +7,8 @@ let apiUrl;
 // Set URL link
 const apiUrls = {
   // Need to change later on real link
-  production: "https://shop-production.up.railway.app",
-  development: "http://localhost:4000/",
+  production: "https://shop-express.herokuapp.com/products",
+  development: "https://shop-express.herokuapp.com/products",
 };
 
 // Determine if production or deployment
@@ -22,6 +22,7 @@ if (window.location.hostname === "localhost") {
 const api = axios.create({
   baseURL: apiUrl,
 });
+
 
 // Export API 
 export default api;
