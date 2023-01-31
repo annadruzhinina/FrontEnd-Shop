@@ -24,12 +24,12 @@ The GA Express site is an e-commerce site which promotes the sales of the best p
 ## Pages
 
 To navigate to an individual page via the URL, use the following:
-1) Home:  http://localhost:3000/
-2) Categories: http://localhost:3000/categories
-3) Sign-In: http://localhost:3000/sign-in
-4) Sign-Out: http://localhost:3000/sign-out
-5) Cart: http://localhost:3000/checkout
-6) Orders: http://localhost:3000/order
+1) Home:  https://gaexpress.netlify.app/
+2) Categories: https://gaexpress.netlify.app/categories
+3) Sign-In: https://gaexpress.netlify.app/sign-in
+4) Sign-Out: https://gaexpress.netlify.app/sign-out
+5) Cart: https://gaexpress.netlify.app/checkout
+6) Orders: https://gaexpress.netlify.app/order
 
 
 ## Technical Notes
@@ -106,11 +106,17 @@ Front-End (All)
 
 ### API Endpoints
 
-- Home:  http://localhost:4000/products
+- Home:  https://shop-express.herokuapp.com/products
 
 ### Snippet of object output:
 ![API Screenshot](./public/image/Backend_API_Screenshot.png)
 
+## Future Features
+- Full user authentication
+- Have Cart tied to each individual user (so it can be maintained on login and logout)
+- Orders Page
+- Order History
+- Add admin account that can add/delete products from inventory (full CRUD)
 
 ## Wire Frame 
 
