@@ -115,8 +115,10 @@ Front-End (All)
 - Full user authentication
 - Have Cart tied to each individual user (so it can be maintained on login and logout)
 - Orders Page
-- Order History
+- Track Order History
 - Add admin account that can add/delete products from inventory (full CRUD)
+- Add payment page
+- Add user profiles with payment information, address, etc.
 
 ## Wire Frame 
 
