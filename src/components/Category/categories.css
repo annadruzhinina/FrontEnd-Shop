@@ -15,6 +15,7 @@
 .category-nav-menu {
   display: flex;
   position: sticky;
+  overflow-y: auto;
 }
 
 .category-link {
